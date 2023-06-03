@@ -8,6 +8,8 @@ import lombok.Data;
 
 import java.time.LocalDateTime;
 
+// 차량 엔티티
+
 @Entity
 @Table(name = "car")
 @Data
@@ -18,6 +20,11 @@ public class Car extends BaseEntity{
     @GeneratedValue
     @Column(name = "car_id")
     private Long id;
+
+    // 제조사 테이블과 다대일 매핑
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "company_id")
+    private Company company;
 
     // 차량 이름
     @Column(name = "car_name")
