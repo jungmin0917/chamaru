@@ -22,9 +22,9 @@ public class Member extends BaseEntity{
     @Column(name = "member_email", unique = true)
     private String email;
 
-    // 회원 토큰 (외부 로그인)
-    @Column(name = "member_token")
-    private String token;
+    // 비밀번호
+    @Column(name = "member_password")
+    private String password;
 
     // 회원 이름
     @Column(name = "member_name")
