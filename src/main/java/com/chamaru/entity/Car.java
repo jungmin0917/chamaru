@@ -1,6 +1,7 @@
 package com.chamaru.entity;
 
 import com.chamaru.constant.CarColor;
+import com.chamaru.constant.CarCompany;
 import com.chamaru.constant.CarFuel;
 import com.chamaru.constant.CarTransmission;
 import jakarta.persistence.*;
@@ -21,10 +22,9 @@ public class Car extends BaseEntity{
     @Column(name = "car_id")
     private Long id;
 
-    // 제조사 테이블과 다대일 매핑
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "company_id")
-    private Company company;
+    // 제조사
+    @Column(name = "car_company")
+    private CarCompany company;
 
     // 차량 이름
     @Column(name = "car_name")
