@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+<main layout:fragment="content">
+    <form method="post" th:action="@{/member/join}" th:object="${joinForm}">
+        <div class="errors" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
+        <!--아이디 부분-->
+        <dl>
+            <dt th:text="#{userId}"></dt>
+            <dd>
+                <input type="text" name="userId" th:field="*{userId}">
+                <div class="errors" th:each="err : ${#fields.errors('userId')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <!--비밀번호 부분-->
+        <dl>
+            <dt th:text="#{userPw}"></dt>
+            <dd>
+                <input type="password" name="userPw" th:field="*{userPw}">
+                <div class="errors" th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <!--비밀번호 확인 부분-->
+        <dl>
+            <dt th:text="#{userPwRe}"></dt>
+            <dd>
+                <input type="password" name="userPwRe" th:field="*{userPwRe}">
+                <div class="errors" th:each="err : ${#fields.errors('userPwRe')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <!--이름 부분-->
+        <dl>
+            <dt th:text="#{userNm}"></dt>
+            <dd>
+                <input type="text" name="userNm" th:field="*{userNm}">
+                <div class="errors" th:each="err : ${#fields.errors('userNm')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <!--이메일 부분-->
+        <dl>
+            <dt th:text="#{userEmail}"></dt>
+            <dd>
+                <input type="text" name="userEmail" th:field="*{userEmail}">
+                <div class="errors" th:each="err : ${#fields.errors('userEmail')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <!--휴대전화번호 부분-->
+        <dl>
+            <dt th:text="#{userPhone}"></dt>
+            <dd>
+                <input type="text" name="userPhone" th:field="*{userPhone}">
+                <div class="errors" th:each="err : ${#fields.errors('userPhone')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <button type="submit" th:text="#{member.btn.join}"></button>
+    </form>
+</main>
+</html>
