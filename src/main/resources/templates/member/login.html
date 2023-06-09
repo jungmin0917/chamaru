@@ -2,24 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/main}">
-<main layout:fragment="content">
-    <form method="post" th:action="@{/member/login}" th:object="${loginForm}">
-        <div class="errors" th:if="${session.loginField == 'global'}" th:text="${session.message}"></div>
-        <dl>
-            <dt th:text="#{userId}"></dt>
-            <dd>
-                <input type="text" name="userId" th:field="*{userId}">
-                <div class="errors" th:if="${session.loginField == 'userId'}" th:text="${session.message}"></div>
-            </dd>
-        </dl>
-        <dl>
-            <dt th:text="#{userPw}"></dt>
-            <dd>
-                <input type="password" name="userPw" th:field="*{userPw}">
-                <div class="errors" th:if="${session.loginField == 'userPw'}" th:text="${session.message}"></div>
-            </dd>
-        </dl>
-        <button type="submit" th:text="#{member.btn.login}"></button>
-    </form>
-</main>
+    <main layout:fragment="content">
+        <form method="post" th:action="@{/member/login}" th:object="${loginForm}">
+            <div class="errors" th:if="${session.loginField == 'global'}" th:text="${session.message}"></div>
+            <dl>
+                <dt th:text="#{userId}"></dt>
+                <dd>
+                    <input type="text" name="userId" th:field="*{userId}">
+                    <div class="errors" th:if="${session.loginField == 'userId'}" th:text="${session.message}"></div>
+                </dd>
+            </dl>
+            <dl>
+                <dt th:text="#{userPw}"></dt>
+                <dd>
+                    <input type="password" name="userPw" th:field="*{userPw}">
+                    <div class="errors" th:if="${session.loginField == 'userPw'}" th:text="${session.message}"></div>
+                </dd>
+            </dl>
+            <button type="submit" th:text="#{member.btn.login}"></button>
+        </form>
+    </main>
 </html>
