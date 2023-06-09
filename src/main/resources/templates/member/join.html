@@ -53,6 +53,11 @@
                 <div class="errors" th:each="err : ${#fields.errors('userPhone')}" th:text="${err}"></div>
             </dd>
         </dl>
+        <div>
+            <input type="checkbox" name="agree" value="true" id="agree" th:field="*{agree}">
+            <label for="agree" th:text="#{member.terms.agree}"></label>
+            <div class="errors" th:each="err : ${#fields.errors('agree')}" th:text="${err}"></div>
+        </div>
         <button type="submit" th:text="#{member.btn.join}"></button>
     </form>
 </main>
