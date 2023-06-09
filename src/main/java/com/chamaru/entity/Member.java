@@ -1,5 +1,6 @@
 package com.chamaru.entity;
 
+import com.chamaru.commons.constants.MemberType;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;
@@ -40,4 +41,9 @@ public class Member extends BaseEntity{
     // 전화번호
     @Column(length = 11)
     private String userPhone;
+
+    // 회원 구분
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private MemberType userType = MemberType.USER; //USER - 사용자, ADMIN - 관리자
 }

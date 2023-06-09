@@ -53,6 +53,7 @@
                 <div class="errors" th:each="err : ${#fields.errors('userPhone')}" th:text="${err}"></div>
             </dd>
         </dl>
+        <!--약관동의 부분-->
         <div>
             <input type="checkbox" name="agree" value="true" id="agree" th:field="*{agree}">
             <label for="agree" th:text="#{member.terms.agree}"></label>
