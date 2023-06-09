@@ -1,6 +1,6 @@
 package com.chamaru.entity;
 
-import com.chamaru.commons.constants.MemberType;
+import com.chamaru.constant.MemberType;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Data;

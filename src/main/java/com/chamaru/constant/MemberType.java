@@ -1,4 +1,4 @@
-package com.chamaru.commons.constants;
+package com.chamaru.constant;
 
 public enum MemberType {
     USER, //일반회원
