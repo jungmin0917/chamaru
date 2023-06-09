@@ -2,8 +2,10 @@ package com.chamaru.entity;
 
 import com.chamaru.constant.MemberType;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -12,6 +14,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "member")
 @Data @Builder
+@NoArgsConstructor @AllArgsConstructor
 public class Member extends BaseEntity{
 
     // 회원 고유번호

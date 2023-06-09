@@ -11,7 +11,7 @@ import org.springframework.validation.Validator;
 @RequiredArgsConstructor
 public class JoinValidator implements Validator, MobileValidator {
 
-    private MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
     @Override
     public boolean supports(Class<?> clazz) {
         return JoinForm.class.isAssignableFrom(clazz);
