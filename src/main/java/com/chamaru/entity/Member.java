@@ -1,7 +1,11 @@
 package com.chamaru.entity;
 
+import com.chamaru.constant.MemberType;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -9,32 +13,40 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "member")
-@Data
+@Data @Builder
+@NoArgsConstructor @AllArgsConstructor
 public class Member extends BaseEntity{
 
-    // 회원 ID
-    @Id
-    @GeneratedValue
-    @Column(name = "member_id")
-    private Long id;
+    // 회원 고유번호
+    @Id @GeneratedValue
+    private Long userNo;
 
-    // 회원 이메일
-    @Column(name = "member_email", unique = true)
-    private String email;
+    // 회원 아이디
+    @Column(length = 20, nullable = false, unique = true) //중복불가 및 널값 불가
+    private String userId;
 
-    // 비밀번호
-    @Column(name = "member_password")
-    private String password;
+    // 회원 비밀번호
+    @Column(length = 65, nullable = false)
+    private String userPw;
 
     // 회원 이름
-    @Column(name = "member_name")
-    private String name;
+    @Column(length = 30, nullable = false)
+    private String userNm;
 
-    // 생년월일
-    @Column(name = "member_birthday")
-    private LocalDateTime birthday;
+    // 회원 이메일
+    @Column(unique = true, nullable = false)
+    private String userEmail;
+
+    // 회원 생년월일
+    @Column(length = 8)
+    private LocalDateTime userBirth;
 
     // 전화번호
-    @Column(name = "member_phone")
-    private String phone;
+    @Column(length = 11, nullable = false)
+    private String userPhone;
+
+    // 회원 구분
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private MemberType userType = MemberType.USER; //USER - 사용자, ADMIN - 관리자
 }

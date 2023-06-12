@@ -4,20 +4,20 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-@EnableWebMvc
+@EnableJpaAuditing
 public class MvcConfig implements WebMvcConfigurer {
 
-    // 공통으로 메세지 처리
     @Bean
     public MessageSource messageSource() {
-        ResourceBundleMessageSource resourceBundleMessageSource = new ResourceBundleMessageSource();
-        resourceBundleMessageSource.setDefaultEncoding("UTF-8");
-        resourceBundleMessageSource.addBasenames("messages.commons", "messages.errors", "messages.validations");
+        ResourceBundleMessageSource ms = new ResourceBundleMessageSource();
+        ms.setDefaultEncoding("UTF-8");
+        ms.addBasenames("messages.commons", "messages.validations");
 
-        return resourceBundleMessageSource;
+        return ms;
     }
+
 }
