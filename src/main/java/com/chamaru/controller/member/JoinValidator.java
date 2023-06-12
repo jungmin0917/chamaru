@@ -28,7 +28,7 @@ public class JoinValidator implements Validator, MobileValidator {
         String userId = joinForm.getUserId();
         String userPw = joinForm.getUserPw();
         String userPwRe = joinForm.getUserPwRe();
-        String mobile = joinForm.getUserPhone();
+        String userPhone = joinForm.getUserPhone();
 
         //1. 아이디 중복 여부
         if (userId != null && !userId.isBlank() && memberRepository.exists(userId)) {
@@ -42,13 +42,13 @@ public class JoinValidator implements Validator, MobileValidator {
         }
 
         //3. 휴대전화번호 검증 (선택사항)
-        if (mobile != null && !mobile.isBlank()) {
-            if (!mobileCheck(mobile)) {
-                errors.rejectValue("mobile", "Validation.mobile");
+        if (userPhone != null && !userPhone.isBlank()) {
+            if (!mobileCheck(userPhone)) {
+                errors.rejectValue("userPhone", "Validation.userPhone");
             }
 
-            mobile = mobile.replaceAll("\\D", ""); //숫자만 남김
-            joinForm.setUserPhone(mobile);
+            userPhone = userPhone.replaceAll("\\D", ""); //숫자만 남김
+            joinForm.setUserPhone(userPhone);
 
         }
     }

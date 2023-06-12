@@ -18,7 +18,7 @@ public class JoinService {
 
     public void join(JoinForm joinForm) {
         Member member = new ModelMapper().map(joinForm, Member.class);
-        System.out.println(123);
+
         member.setUserType(MemberType.USER);
 
         String hash = passwordEncoder.encode(joinForm.getUserPw());
