@@ -45,7 +45,7 @@
                 <div class="errors" th:each="err : ${#fields.errors('userEmail')}" th:text="${err}"></div>
             </dd>
             <dt th:text="#{userEmailCheckNumber}"></dt>
-            <button type="button" th:text="#{member.btn.emailCheck}" th:onclick="dataSend(this.form)"></button>
+            <button type="button" th:text="#{member.btn.emailCheck}" th:onclick="emailSend(this.form)"></button>
             <dd>
                 <input type="text" name="userEmailCheck" th:field="*{userEmailCheck}">
                 <div class="errors" th:each="err : ${#fields.errors('userEmailCheck')}" th:text="${err}"></div>
