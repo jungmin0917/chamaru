@@ -40,9 +40,15 @@
         <!--이메일 부분-->
         <dl>
             <dt th:text="#{userEmail}"></dt>
+            <button type="button" th:text="#{member.btn.emailCheck}"></button>
             <dd>
                 <input type="text" name="userEmail" th:field="*{userEmail}">
                 <div class="errors" th:each="err : ${#fields.errors('userEmail')}" th:text="${err}"></div>
+            </dd>
+            <dt th:text="#{userEmailCheckNumber}"></dt>
+            <dd>
+                <input type="text" name="userEmailCheck" th:field="*{userEmailCheck}">
+                <div class="errors" th:each="err : ${#fields.errors('userEmailCheck')}" th:text="${err}"></div>
             </dd>
         </dl>
         <!--휴대전화번호 부분-->
