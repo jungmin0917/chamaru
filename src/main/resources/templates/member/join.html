@@ -40,12 +40,12 @@
         <!--이메일 부분-->
         <dl>
             <dt th:text="#{userEmail}"></dt>
-            <button type="button" th:text="#{member.btn.emailCheck}"></button>
             <dd>
-                <input type="text" name="userEmail" th:field="*{userEmail}">
+                <input type="text" id="userEmail" name="userEmail" th:field="*{userEmail}">
                 <div class="errors" th:each="err : ${#fields.errors('userEmail')}" th:text="${err}"></div>
             </dd>
             <dt th:text="#{userEmailCheckNumber}"></dt>
+            <button type="button" th:text="#{member.btn.emailCheck}" th:onclick="dataSend(this.form)"></button>
             <dd>
                 <input type="text" name="userEmailCheck" th:field="*{userEmailCheck}">
                 <div class="errors" th:each="err : ${#fields.errors('userEmailCheck')}" th:text="${err}"></div>
