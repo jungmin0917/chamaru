@@ -34,7 +34,7 @@ public class Member extends BaseEntity{
     private String userNm;
 
     // 회원 이메일
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String userEmail;
 
     // 회원 생년월일
@@ -42,7 +42,7 @@ public class Member extends BaseEntity{
     private LocalDateTime userBirth;
 
     // 전화번호
-    @Column(length = 11)
+    @Column(length = 11, nullable = false)
     private String userPhone;
 
     // 회원 구분

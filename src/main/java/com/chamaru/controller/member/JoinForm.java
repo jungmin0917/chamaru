@@ -23,9 +23,11 @@ public class JoinForm {
     @NotBlank
     private String userNm;
 
+    @NotBlank
     @Email
     private String userEmail;
 
+    @NotBlank
     private String userPhone;
 
     @AssertTrue
