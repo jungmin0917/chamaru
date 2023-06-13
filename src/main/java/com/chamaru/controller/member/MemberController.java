@@ -27,9 +27,10 @@ public class MemberController {
     public String joinPost(@Valid JoinForm joinForm, Errors errors) {
         joinValidator.validate(joinForm, errors);
 
+        System.out.println(123);
 
         if (errors.hasErrors()) {
-            return "member/join";
+            return "member/joinPage";
         }
 
         joinService.join(joinForm);
@@ -40,7 +41,7 @@ public class MemberController {
     @GetMapping("/login")
     public String login(@ModelAttribute LoginForm loginForm) {
 
-
-        return "member/login";
+        //return "member/login";
+        return "member/loginPage";
     }
 }
