@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* 화면 전체 랩 */
+.wrapper {
+	width: 100%;
+}
+
+/* content 랩 */
+.wrap {
+	width: 980px;
+	margin: auto;
+}
+
+/* 페이지 제목 */
+.subject {
+	width: 100%;
+	height: 60px;
+	background-color: gray;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.subject span {
+	margin-left: 31px;
+	font-size: 40px;
+	font-weight: 900;
+	color: white;
+}
+
+/* 아이디 부분*/
+.id_wrap {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.id_name {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.id_input_box {
+	border: 1px solid black;
+	height: 31px;
+	padding: 10px 14px;
+}
+
+.id_input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-size: 28px;
+}
+
