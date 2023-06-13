@@ -19,7 +19,8 @@ public class MemberController {
     @GetMapping("/join")
     public String join(@ModelAttribute JoinForm joinForm) {
 
-        return "member/join";
+        //return "member/join";
+        return "member/joinPage";
     }
 
     @PostMapping("/join")
