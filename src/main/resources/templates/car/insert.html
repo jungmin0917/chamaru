@@ -1,2 +1,49 @@
-TEST
-TEST
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+
+<main layout:fragment="content">
+    <form method="post" th:action="@{/car/insert}" th:object="${carDTO}">
+        <select name="company" th:field="*{company}">
+            <option value="">제조사 선택</option>
+            <option th:each="carCompany : ${carCompanyList}" th:value="${carCompany}" th:text="${carCompany}"></option>
+        </select>
+        <dl>
+            <dt th:text="#{name}"></dt>
+            <dd>
+                <input type="text" name="name" th:field="*{name}">
+            </dd>
+        </dl>
+        <dl>
+            <dt th:text="#{trim}"></dt>
+            <dd>
+                <input type="text" name="trim" th:field="*{trim}">
+            </dd>
+        </dl>
+        <dl>
+            <dt th:text="#{distance}"></dt>
+            <dd>
+                <input type="text" name="distance" th:field="*{distance}">
+            </dd>
+        </dl>
+        <dl>
+            <dt th:text="#{displacement}"></dt>
+            <dd>
+                <input type="text" name="displacement" th:field="*{displacement}">
+            </dd>
+        </dl>
+        <select name="transmission" th:field="*{transmission}">
+            <option value="">변속기 선택</option>
+            <option th:each="carTransmission : ${carTransmissionList}" th:value="${carTransmission}" th:text="${carTransmission}"></option>
+        </select>
+        <dl>
+            <dt th:text="#{year}"></dt>
+            <dd>
+                <input type="date" name="year" th:field="*{year}">
+            </dd>
+        </dl>
+        <button type="submit" th:text="#{car.btn.insert}"></button>
+    </form>
+</main>
+</html>

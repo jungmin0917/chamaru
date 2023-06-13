@@ -4,7 +4,7 @@
       layout:decorate="~{layouts/main}">
 <main layout:fragment="content">
     <form method="post" th:action="@{/member/join}" th:object="${joinForm}">
-        <div class="errors" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
+            <div class="errors" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
         <!--아이디 부분-->
         <dl>
             <dt th:text="#{userId}"></dt>

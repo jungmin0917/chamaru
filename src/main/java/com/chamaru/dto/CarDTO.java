@@ -4,7 +4,7 @@ import com.chamaru.constant.CarColor;
 import com.chamaru.constant.CarCompany;
 import com.chamaru.constant.CarFuel;
 import com.chamaru.constant.CarTransmission;
-import jakarta.persistence.Column;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -18,7 +18,7 @@ public class CarDTO {
     // 차량 이름
     private String name;
 
-    // 차량 트림
+    // 차량 등급
     private String trim;
 
     // 주행 거리
