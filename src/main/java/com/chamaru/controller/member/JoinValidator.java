@@ -29,6 +29,7 @@ public class JoinValidator implements Validator, MobileValidator {
         String userPw = joinForm.getUserPw();
         String userPwRe = joinForm.getUserPwRe();
         String userPhone = joinForm.getUserPhone();
+        //String userEmailCheck = joinFor
 
         //1. 아이디 중복 여부
         if (userId != null && !userId.isBlank() && memberRepository.exists(userId)) {
