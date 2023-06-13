@@ -16,6 +16,14 @@
 	margin: auto;
 }
 
+/*공통 오류*/
+.errors {
+    width: 50%;
+    margin-top: 20px;
+    margin: auto;
+    color:red;
+}
+
 /* 페이지 제목 */
 .subject {
 	width: 50%;

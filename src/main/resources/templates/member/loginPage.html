@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+<main layout:fragment="content">
+    <div class="wrapper">
+        <div class="wrap">
+            <div class="subject">
+                <span th:text="#{loginMessage}"></span>
+            </div>
+            <form method="post" th:action="@{/member/login}" th:object="${loginForm}">
+                <!--아이디 부분-->
+                <div class="id_wrap">
+                    <div class="id_name" th:text="#{userId}"></div>
+                    <div class="id_input_box">
+                        <input class="id_input" type="text" name="userId" th:field="*{userId}">
+                    </div>
+                    <div class="idErrors" th:if="${session.loginField == 'userId'}" th:text="${session.message}"></div>
+                </div>
+                <!--비밀번호 부분-->
+                <div class="pw_wrap">
+                    <div class="pw_name" th:text="#{userPw}"></div>
+                    <div class="pw_input_box">
+                        <input class="pw_input" type="password" name="userPw" th:field="*{userPw}">
+                    </div>
+                    <div class="pwErrors" th:if="${session.loginField == 'userPw'}" th:text="${session.message}"></div>
+                </div>
+                <!--공통 오류 부분-->
+                <div class="errors" th:if="${session.loginField == 'global'}" th:text="${session.message}"></div>
+                <!--로그인 버튼 부분-->
+                <div class="join_button_wrap">
+                    <button type="submit" class="join_button" th:text="#{member.btn.join}" style="cursor:pointer"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+</html>
