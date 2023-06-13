@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+<main layout:fragment="content">
+  <div class="wrapper">
+    <div class="wrap">
+      <div class="subject">
+        <span>회원가입</span>
+      </div>
+      <form method="post" th:action="@{/member/join}" th:object="${joinForm}">
+          <div class="errors" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
+          <div class="id_wrap">
+            <div class="id_name" th:text="#{userId}"></div>
+            <div class="id_input_box">
+              <input class="id_input" type="text" name="userId" th:field="*{userId}">
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</main>
+</html>
