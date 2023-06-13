@@ -36,9 +36,3 @@ function mailFormCheck(email) {
 
 
 //회원가입 유효성 검사
-function join(f) {
-
-    alert("버튼누름!");
-    return;
-
-}

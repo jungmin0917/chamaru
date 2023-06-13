@@ -33,6 +33,6 @@ public class JoinForm {
     @NotBlank
     private String userPhone;
 
-    @AssertTrue
-    private boolean agree;
+/*    @AssertTrue
+    private boolean agree;*/
 }

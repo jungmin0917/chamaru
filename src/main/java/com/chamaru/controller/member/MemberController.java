@@ -27,6 +27,7 @@ public class MemberController {
     public String joinPost(@Valid JoinForm joinForm, Errors errors) {
         joinValidator.validate(joinForm, errors);
 
+        System.out.println(123);
 
         if (errors.hasErrors()) {
             return "member/joinPage";

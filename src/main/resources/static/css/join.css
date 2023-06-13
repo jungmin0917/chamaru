@@ -185,6 +185,7 @@
 /* 이메일 인증 부분*/
 .email_check_wrap {
 	width: 50%;
+	height: 96px;
 	margin-top: 20px;
 	margin: auto;
 }
@@ -198,8 +199,8 @@
 	border: 1px solid gray;
 	height: 31px;
 	padding: 10px 14px;
-	width: 61%;
-    float: left;
+	float: left;
+	width: 60%;
 }
 
 .email_check_input {
@@ -212,17 +213,25 @@
 .email_check_button {
 	border: 1px solid black;
 	height: 51px;
-	width: 30%;
 	float: right;
+	width: 30%;
 	text-align: center;
 	font-size: 30px;
 	font-weight: 900;
-	background-color: #ececf7;
+	background-color: gray;
 	cursor: pointer;
+	color: white;
+}
+
+.email_check_button:hover {
+	background-color: white;
+	color:gray;
 }
 
 .emailCheckErrors {
     color: red;
+    width: 50%;
+    margin: auto;
 }
 
 
@@ -255,3 +264,26 @@
 .phoneErrors {
     color: red;
 }
+
+
+/* 가입하기 버튼 */
+.join_button_wrap {
+	padding-top: 20px;
+	text-align: center;
+	margin: auto;
+}
+
+.join_button {
+	width: 50%;
+	height: 60px;
+	background-color: gray;
+	font-size: 40px;
+	font-weight: 900;
+	color: white;
+}
+
+.join_button:hover {
+	background-color: white;
+	color:gray;
+}
+

@@ -59,8 +59,8 @@
           <div class="email_check_button_wrap">
             <input type="button" class="email_check_button" th:value="#{member.btn.emailCheck}" onclick="sendMail(this.form)">
           </div>
-          <div class="emailCheckErrors" th:each="err : ${#fields.errors('userEmailCheck')}" th:text="${err}"></div>
         </div>
+        <div class="emailCheckErrors" th:each="err : ${#fields.errors('userEmailCheck')}" th:text="${err}"></div>
         <!--휴대전화번호 부분-->
         <div class="phone_wrap">
           <div class="phone_name" th:text="#{userPhone}"></div>
@@ -69,7 +69,9 @@
           </div>
           <div class="phoneErrors" th:each="err : ${#fields.errors('userPhone')}" th:text="${err}"></div>
         </div>
-        <button type="submit" th:text="#{member.btn.join}" onclick="join(this.form)"></button>
+        <div class="join_button_wrap">
+          <button type="submit" class="join_button" th:text="#{member.btn.join}" style="cursor:pointer"></button>
+        </div>
       </form>
     </div>
   </div>
