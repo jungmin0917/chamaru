@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 800px;
+}
+
+/* header - S */
+#header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mypage {
+    font-weight: bold;  
+    font-size: 20px;
+}
+
+.login {
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+/* header - E */

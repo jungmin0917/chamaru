@@ -20,6 +20,11 @@ header {
     height: 50px;
 }
 
+.logo {
+    width: 100px;
+    height: 50px;
+}
+
 #search {
     position: absolute;
     right: 3rem;
