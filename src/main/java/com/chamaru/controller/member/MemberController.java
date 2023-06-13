@@ -29,7 +29,7 @@ public class MemberController {
 
 
         if (errors.hasErrors()) {
-            return "member/join";
+            return "member/joinPage";
         }
 
         joinService.join(joinForm);
