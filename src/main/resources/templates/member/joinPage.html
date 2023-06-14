@@ -74,23 +74,23 @@
         <div class="address1_wrap">
           <div class="address1_name" th:text="#{userAddr1}"></div>
           <div class="address1_input_box">
-            <input class="address1_input" type="text" name="userAddr1" th:field="*{userAddr1}">
+            <input class="address1_input" type="text" name="userAddr1" th:field="*{userAddr1}" readonly="readonly">
           </div>
           <div class="address1_button_wrap">
-            <button type="button" class="address1_button" th:text="#{member.btn.addr}" style="cursor:pointer" onclick="emailSend(email)"></button>
+            <button type="button" class="address1_button" th:text="#{member.btn.addr}" style="cursor:pointer" onclick="execution_daum_address()"></button>
           </div>
         </div>
         <!--주소2 부분-->
         <div class="address2_wrap">
           <div class="address2_input_box">
-            <input class="address2_input" type="text" name="userAddr2" th:field="*{userAddr2}">
+            <input class="address2_input" type="text" name="userAddr2" th:field="*{userAddr2}" readonly="readonly">
           </div>
           <div class="address2Errors" th:each="err : ${#fields.errors('userAddr2')}" th:text="${err}"></div>
         </div>
         <!--상세주소 부분-->
         <div class="address3_wrap">
           <div class="address3_input_box">
-            <input class="address3_input" type="text" name="userAddr3" th:field="*{userAddr3}">
+            <input class="address3_input" type="text" name="userAddr3" th:field="*{userAddr3}" readonly="readonly">
           </div>
           <div class="address3Errors" th:each="err : ${#fields.errors('userAddr3')}" th:text="${err}"></div>
         </div>

@@ -41,6 +41,7 @@ public class JoinForm {
 
     @NotBlank
     private String userAddr3;
+
 /*    @AssertTrue
     private boolean agree;*/
 }
