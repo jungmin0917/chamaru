@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+
+<main layout:fragment="content">
+    <form method="post" th:action="@{/car/insert}" th:object="${carDTO}">
+        <select name="company" th:field="*{company}">
+            <option value="">제조사 선택</option>
+            <option th:each="carCompany : ${carCompanyList}" th:value="${carCompany}" th:text="${carCompany}"></option>
+        </select>
+        <div class="errors" th:each="err : ${#fields.errors('company')}" th:text="${err}"></div>
+        <dl>
+            <dt th:text="#{name}"></dt>
+            <dd>
+                <input type="text" name="name" th:field="*{name}">
+                <div class="errors" th:each="err : ${#fields.errors('name')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt th:text="#{trim}"></dt>
+            <dd>
+                <input type="text" name="trim" th:field="*{trim}">
+                <div class="errors" th:each="err : ${#fields.errors('trim')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt th:text="#{distance}"></dt>
+            <dd>
+                <input type="text" name="distance" th:field="*{distance}">
+                <div class="errors" th:each="err : ${#fields.errors('distance')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt th:text="#{displacement}"></dt>
+            <dd>
+                <input type="text" name="displacement" th:field="*{displacement}">
+                <div class="errors" th:each="err : ${#fields.errors('displacement')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <select name="transmission" th:field="*{transmission}">
+            <option value="">변속기 선택</option>
+            <option th:each="carTransmission : ${carTransmissionList}" th:value="${carTransmission}" th:text="${carTransmission}"></option>
+        </select>
+        <div class="errors" th:each="err : ${#fields.errors('transmission')}" th:text="${err}"></div>
+        <select name="year1" th:field="*{year1}">
+            <option value="">연식</option>
+            <option th:each="year : ${years}" th:value="${year}" th:text="${year}"></option>
+        </select>
+        <div class="errors" th:each="err : ${#fields.errors('year1')}" th:text="${err}"></div>
+        <select name="month1" th:field="*{month1}">
+            <option value="">월</option>
+            <option th:each="month : ${months}" th:value="${month}" th:text="${month}"></option>
+        </select>
+        <div class="errors" th:each="err : ${#fields.errors('month1')}" th:text="${err}"></div>
+        <select name="fuel" th:field="*{fuel}">
+            <option value="">연료 종류</option>
+            <option th:each="carFuel : ${carFuelList}" th:value="${carFuel}" th:text="${carFuel}"></option>
+        </select>
+        <div class="errors" th:each="err : ${#fields.errors('fuel')}" th:text="${err}"></div>
+        <select name="color" th:field="*{color}">
+            <option value="">색상</option>
+            <option th:each="carColor : ${carColorList}" th:value="${carColor}" th:text="${carColor}"></option>
+        </select>
+        <div class="errors" th:each="err : ${#fields.errors('color')}" th:text="${err}"></div>
+        <dl>
+            <dt th:text="#{number}"></dt>
+            <dd>
+                <input type="text" name="number" th:field="*{number}">
+                <div class="errors" th:each="err : ${#fields.errors('number')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <label for="option1" th:text="#{option1}"></label>
+        <input type="checkbox" id="option1" name="option1" th:checked="${option1}">
+        <label for="option2" th:text="#{option2}"></label>
+        <input type="checkbox" id="option2" name="option2" th:checked="${option2}">
+        <label for="option3" th:text="#{option3}"></label>
+        <input type="checkbox" id="option3" name="option3" th:checked="${option3}">
+        <label for="option4" th:text="#{option4}"></label>
+        <input type="checkbox" id="option4" name="option4" th:checked="${option4}">
+        <label for="option5" th:text="#{option5}"></label>
+        <input type="checkbox" id="option5" name="option5" th:checked="${option5}">
+        <label for="option6" th:text="#{option6}"></label>
+        <input type="checkbox" id="option6" name="option6" th:checked="${option6}">
+        <label for="option7" th:text="#{option7}"></label>
+        <input type="checkbox" id="option7" name="option7" th:checked="${option7}">
+        <label for="option8" th:text="#{option8}"></label>
+        <input type="checkbox" id="option8" name="option8" th:checked="${option8}">
+        <label for="option9" th:text="#{option9}"></label>
+        <input type="checkbox" id="option9" name="option9" th:checked="${option9}">
+        <label for="option10" th:text="#{option10}"></label>
+        <input type="checkbox" id="option10" name="option10" th:checked="${option10}">
+        <button type="submit" th:text="#{car.btn.insert}"></button>
+    </form>
+</main>
+</html>

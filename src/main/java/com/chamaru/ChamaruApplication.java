@@ -9,6 +9,8 @@ public class ChamaruApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ChamaruApplication.class, args);
+
+
     }
 
 }

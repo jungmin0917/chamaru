@@ -24,6 +24,7 @@ public class Car extends BaseEntity{
 
     // 제조사
     @Column(name = "car_company")
+    @Enumerated(EnumType.STRING)
     private CarCompany company;
 
     // 차량 이름
@@ -44,6 +45,7 @@ public class Car extends BaseEntity{
 
     // 변속기
     @Column(name = "car_transmission")
+    @Enumerated(EnumType.STRING)
     private CarTransmission transmission;
     
     // 연식
@@ -52,10 +54,12 @@ public class Car extends BaseEntity{
     
     // 연료 종류
     @Column(name = "car_fuel")
+    @Enumerated(EnumType.STRING)
     private CarFuel fuel;
     
     // 색상
     @Column(name = "car_color")
+    @Enumerated(EnumType.STRING)
     private CarColor color;
 
     // 차량번호
