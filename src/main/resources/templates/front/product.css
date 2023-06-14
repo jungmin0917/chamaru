@@ -5,6 +5,7 @@
 html {
     max-width: 800px;
     height: 2000px;
+    margin: 0 0 0 5rem;
 }
 
 /* header - S */
@@ -60,12 +61,12 @@ img {
 
 /* release - S */
 .fast-release {
-    color : green;
+    color : #0BA252;
     font-size: 12px;
 }
 
 .release-possible {
-    color: green;
+    color: #0BA252;
     font-size: 13px;
 }
 
@@ -127,7 +128,7 @@ hr {
     width: 100%;
     height: 100px;
     border: 1px solid;
-    margin: 1rem 0 0 0;
+    margin: 2rem 0;
     font-size: 12px;
     text-align: center;
     
@@ -155,3 +156,62 @@ hr {
     color: green;
 }
 /* required - E */
+
+/* 계약 안내 - S */
+#contract-section {
+    margin: 2rem 0;
+}
+
+.contract-intro {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    background-color: #0BA252;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 4px;
+    border-radius: 0.5rem;
+}
+
+.contract-mention {
+    font-size: 13px;
+    color: #0BA252;
+    
+}
+/* 계약 안내 - E */
+
+/* 차량 기본 정보 - S */
+#car-information {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+
+li {
+    display: inline-block;
+    padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.car-information-page1 {
+    width: 50%;
+}
+/* 차량 기본 정보 - E */
+
+/* 차량 옵션 정보 - S */
+.car-option-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+li img {
+    width: 120px;
+    height: 110px;
+}
+
+/* 차량 옵션 정보 - E */
