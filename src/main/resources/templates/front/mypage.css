@@ -4,12 +4,14 @@
 
 html {
     max-width: 800px;
+    margin: 0 0 0 5rem;
 }
 
 /* header - S */
 #header {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid;
 }
 
 .mypage {
@@ -18,13 +20,62 @@ html {
 }
 
 .login {
+    margin: 0 0 0.5rem 0;
     cursor: pointer;
-    width: 50px;
+    width: 60px;
     height: 30px;
-    background-color: blue;
-    border-radius: 10px;
+    background-color: #0BA252;
+    border-radius: 15px;
     color: white;
     font-size: 12px;
     text-align: center;
+    padding-top: 5px;
 }
 /* header - E */
+
+/* Nav - S */
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+li {
+    display: inline-block;
+    width: 25%;
+    font-size: 14px;
+}
+
+.icon {
+    
+    width: 30px;
+    height: 30px;
+}
+/* Nav - E */
+
+
+/* menu - S */
+#menu {
+    margin: 2rem 3rem 2rem 0;
+}
+
+.menu-size {
+    width: 100%;
+    height: 50px;
+}
+
+.information {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    background-color: #0BA252;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* menu - E */
