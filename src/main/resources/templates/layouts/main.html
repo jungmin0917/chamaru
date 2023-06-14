@@ -8,11 +8,16 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
     <link rel="stylesheet" type="text/css" th:each="file : ${addCss}" th:href="@{/css/{file}.css(file=${file})}">
     <link rel="stylesheet" type="text/css" th:href="@{/css/join.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
 
     <th:block layout:fragment="addCss"></th:block>
     <script th:src="@{/js/common/js}"></script>
     <script th:each="file : ${addScript}" th:src="@{/js/{file}.js(file=${file})}"></script>
     <script type="text/javascript" th:src="@{/js/join.js}"></script>
+    <script type="text/javascript" th:src="@{/js/login.js}"></script>
+    <script
+            src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <th:block layout:fragment="addScript"></th:block>
 </head>
 <body>

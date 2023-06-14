@@ -27,11 +27,20 @@ public class JoinForm {
     @Email
     private String userEmail;
 
-    @NotBlank
-    private String userEmailCheck;
+    /*@NotBlank
+    private String userEmailCheck;*/
 
     @NotBlank
     private String userPhone;
+
+    @NotBlank
+    private String userAddr1;
+
+    @NotBlank
+    private String userAddr2;
+
+    @NotBlank
+    private String userAddr3;
 
 /*    @AssertTrue
     private boolean agree;*/
