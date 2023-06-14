@@ -28,10 +28,11 @@
 .subject {
 	width: 50%;
 	height: 60px;
-	background-color: gray;
+	background-color: #0BA252;
 	margin-top: 10px;
 	text-align: center;
 	margin: auto;
+	border-radius: 15px;
 }
 
 .subject span {
@@ -41,22 +42,37 @@
 	color: white;
 }
 
+.joinPageMessage {
+    width: 50%;
+    margin: auto;
+    padding-top: 15px;
+}
+
+.joinPageMessage span {
+    font-size: 20px;
+    font-weight: 600;
+	color: #0BA252;
+}
+
 /* 아이디 부분*/
 .id_wrap {
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
+	padding-top: 15px;
 }
 
 .id_name {
 	font-size: 25px;
 	font-weight: bold;
+	color: #0BA252;
 }
 
 .id_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
+	border-radius: 15px;
 }
 
 .id_input {
@@ -64,6 +80,11 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
+}
+
+.id_input:focus {
+    outline:none;
 }
 
 .idErrors {
@@ -75,17 +96,20 @@
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
+	padding-top: 15px;
 }
 
 .pw_name {
 	font-size: 25px;
 	font-weight: bold;
+	color: #0BA252;
 }
 
 .pw_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
+	border-radius: 15px;
 }
 
 .pw_input {
@@ -93,6 +117,11 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
+}
+
+.pw_input:focus {
+    outline:none;
 }
 
 .pwErrors {
@@ -105,17 +134,20 @@
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
+	padding-top: 15px;
 }
 
 .pwRe_name {
 	font-size: 25px;
 	font-weight: bold;
+	color: #0BA252;
 }
 
 .pwRe_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
+	border-radius: 15px;
 }
 
 .pwRe_input {
@@ -123,6 +155,11 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
+}
+
+.pwRe_input:focus {
+    outline:none;
 }
 
 .pwReErrors {
@@ -135,17 +172,20 @@
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
+	padding-top: 15px;
 }
 
 .nm_name {
 	font-size: 25px;
 	font-weight: bold;
+	color: #0BA252;
 }
 
 .nm_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
+	border-radius: 15px;
 }
 
 .nm_input {
@@ -153,6 +193,11 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
+}
+
+.nm_input:focus {
+    outline:none;
 }
 
 .nmErrors {
@@ -165,17 +210,20 @@
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
+	padding-top: 15px;
 }
 
 .email_name {
 	font-size: 25px;
 	font-weight: bold;
+	color: #0BA252;
 }
 
 .email_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
+	border-radius: 15px;
 }
 
 .email_input {
@@ -183,6 +231,11 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
+}
+
+.email_input:focus {
+    outline:none;
 }
 
 .emailErrors {
@@ -196,19 +249,23 @@
 	height: 96px;
 	margin-top: 20px;
 	margin: auto;
+	padding-top: 15px;
 }
 
 .email_check_name {
 	font-size: 25px;
 	font-weight: bold;
+	color: #0BA252;
 }
 
 .email_check_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
 	float: left;
 	width: 60%;
+	border-radius: 15px;
+	color: #0BA252;
 }
 
 .email_check_input {
@@ -216,24 +273,30 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+
+}
+
+.email_check_input:focus {
+    outline:none;
 }
 
 .email_check_button {
-	border: 1px solid black;
+	border: 1px solid #0BA252;
 	height: 51px;
 	float: right;
 	width: 30%;
 	text-align: center;
 	font-size: 22px;
 	font-weight: 900;
-	background-color: gray;
+	background-color: #0BA252;
 	cursor: pointer;
 	color: white;
+	border-radius: 15px;
 }
 
 .email_check_button:hover {
 	background-color: white;
-	color:gray;
+	color:#0BA252;
 }
 
 .emailCheckErrors {
@@ -249,17 +312,20 @@
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
+	padding-top: 15px;
 }
 
 .phone_name {
 	font-size: 25px;
 	font-weight: bold;
+	color: #0BA252;
 }
 
 .phone_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
+	border-radius: 15px;
 }
 
 .phone_input {
@@ -267,6 +333,11 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
+}
+
+.phone_input:focus {
+    outline:none;
 }
 
 .phoneErrors {
@@ -280,19 +351,22 @@
 	height: 96px;
 	margin-top: 20px;
 	margin: auto;
+	padding-top: 15px;
 }
 
 .address1_name {
 	font-size: 25px;
 	font-weight: bold;
+	color: #0BA252;
 }
 
 .address1_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
 	float: left;
 	width: 60%;
+	border-radius: 15px;
 }
 
 .address1_input {
@@ -300,24 +374,31 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
 }
 
+.address1_input:focus {
+    outline:none;
+}
+
+
 .address1_button {
-	border: 1px solid black;
+	border: 1px solid #0BA252;
 	height: 51px;
 	float: right;
 	width: 30%;
 	text-align: center;
 	font-size: 22px;
 	font-weight: 900;
-	background-color: gray;
+	background-color: #0BA252;
 	cursor: pointer;
 	color: white;
+	border-radius: 15px;
 }
 
 .address1_button:hover {
 	background-color: white;
-	color:gray;
+	color:#0BA252;
 }
 
 .address1Errors {
@@ -334,9 +415,11 @@
 }
 
 .address2_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
+	border-radius: 15px;
+	color: #0BA252;
 }
 
 .address2_input {
@@ -344,6 +427,11 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
+}
+
+.address2_input:focus {
+    outline:none;
 }
 
 .address2Errors {
@@ -359,9 +447,10 @@
 }
 
 .address3_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
+	border-radius: 15px;
 }
 
 .address3_input {
@@ -369,15 +458,28 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
+}
+
+.address3_input:focus {
+    outline:none;
 }
 
 .address3Errors {
     color: red;
 }
 
+/*주소창 placeholder 색상 변경*/
+.address1_input::placeholder,
+.address2_input::placeholder,
+.address3_input::placeholder {
+    font-size: 22px;
+    color: #0BA252;
+}
+
 /* 가입하기 버튼 */
 .join_button_wrap {
-	padding-top: 20px;
+	padding-top: 30px;
 	text-align: center;
 	margin: auto;
 }
@@ -385,14 +487,16 @@
 .join_button {
 	width: 50%;
 	height: 60px;
-	background-color: gray;
+	border: 1px solid #0BA252;
+	background-color: #0BA252;
 	font-size: 40px;
 	font-weight: 900;
 	color: white;
+    border-radius: 15px;
 }
 
 .join_button:hover {
 	background-color: white;
-	color:gray;
+	color:#0BA252;
 }
 

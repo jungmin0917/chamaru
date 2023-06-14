@@ -20,10 +20,11 @@
 .subject {
 	width: 50%;
 	height: 60px;
-	background-color: gray;
+	background-color: #0BA252;
 	margin-top: 10px;
 	text-align: center;
 	margin: auto;
+	border-radius: 15px;
 }
 
 .subject span {
@@ -38,17 +39,20 @@
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
+	padding-top: 15px;
 }
 
 .id_name {
 	font-size: 25px;
 	font-weight: bold;
+	color: #0BA252;
 }
 
 .id_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
+	border-radius: 15px;
 }
 
 .id_input {
@@ -56,6 +60,11 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
+}
+
+.id_input:focus {
+    outline:none;
 }
 
 .idErrors {
@@ -67,17 +76,20 @@
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
+	padding-top: 15px;
 }
 
 .pw_name {
 	font-size: 25px;
 	font-weight: bold;
+	color: #0BA252;
 }
 
 .pw_input_box {
-	border: 1px solid gray;
+	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
+	border-radius: 15px;
 }
 
 .pw_input {
@@ -85,6 +97,11 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
+	color: #0BA252;
+}
+
+.pw_input:focus {
+    outline:none;
 }
 
 .pwErrors {
@@ -101,7 +118,7 @@
 
 /* 로그인 버튼 */
 .login_button_wrap {
-	padding-top: 20px;
+	padding-top: 30px;
 	text-align: center;
 	margin: auto;
 }
@@ -109,13 +126,15 @@
 .login_button {
 	width: 50%;
 	height: 60px;
-	background-color: gray;
+	background-color: #0BA252;
+	border: 1px solid #0BA252;
 	font-size: 40px;
 	font-weight: 900;
 	color: white;
+    border-radius: 15px;
 }
 
 .login_button:hover {
 	background-color: white;
-	color:gray;
+	color:#0BA252;
 }

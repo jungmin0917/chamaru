@@ -8,6 +8,9 @@
       <div class="subject">
         <span th:text="#{joinMessage}"></span>
       </div>
+      <div class="joinPageMessage">
+        <span th:text="#{joinPageMainMessage}"></span>
+      </div>
       <form method="post" th:action="@{/member/join}" th:object="${joinForm}">
         <div class="errors" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
         <!--아이디 부분-->
@@ -74,7 +77,7 @@
         <div class="address1_wrap">
           <div class="address1_name" th:text="#{userAddr1}"></div>
           <div class="address1_input_box">
-            <input class="address1_input" type="text" name="userAddr1" th:field="*{userAddr1}" readonly="readonly">
+            <input class="address1_input" type="text" name="userAddr1" th:field="*{userAddr1}" readonly="readonly" th:placeholder="#{addressInfo1}">
           </div>
           <div class="address1_button_wrap">
             <button type="button" class="address1_button" th:text="#{member.btn.addr}" style="cursor:pointer" onclick="execution_daum_address()"></button>
@@ -83,14 +86,14 @@
         <!--주소2 부분-->
         <div class="address2_wrap">
           <div class="address2_input_box">
-            <input class="address2_input" type="text" name="userAddr2" th:field="*{userAddr2}" readonly="readonly">
+            <input class="address2_input" type="text" name="userAddr2" th:field="*{userAddr2}" readonly="readonly" th:placeholder="#{addressInfo2}">
           </div>
           <div class="address2Errors" th:each="err : ${#fields.errors('userAddr2')}" th:text="${err}"></div>
         </div>
         <!--상세주소 부분-->
         <div class="address3_wrap">
           <div class="address3_input_box">
-            <input class="address3_input" type="text" name="userAddr3" th:field="*{userAddr3}" readonly="readonly">
+            <input class="address3_input" type="text" name="userAddr3" th:field="*{userAddr3}" readonly="readonly" th:placeholder="#{addressInfo3}">
           </div>
           <div class="address3Errors" th:each="err : ${#fields.errors('userAddr3')}" th:text="${err}"></div>
         </div>

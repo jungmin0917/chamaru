@@ -105,8 +105,11 @@ function join(f) {
     var userPwRe = f.userPwRe.value;
     var userNm = f.userNm.value;
     var userEmail = f.userEmail.value;
-    var userEmailCheck = f.userEmailCheck.value;
+    /*var userEmailCheck = f.userEmailCheck.value;*/
     var userPhone = f.userPhone.value;
+    var userAddr1 = f.userAddr1.value;
+    var userAddr2 = f.userAddr2.value;
+    var userAddr3 = f.userAddr3.value;
     if (userId == "") {
         alert("아이디를 입력하세요");
         return;
@@ -116,27 +119,46 @@ function join(f) {
         return;
     }
     if (userPw == "") {
-        alert("비밀번호를 입력하세요");
+        alert("비밀번호를 입력하세요.");
         return;
     }
     if (userPwRe == "") {
-        alert("비밀번호 확인을 입력하세요");
+        alert("비밀번호 확인을 입력하세요.");
         return;
     }
+
+    if (userPw != userPwRe) {
+        alert("비밀번호가 일치하지 않습니다.");
+        return;
+    }
+
     if (userNm == "") {
-        alert("이름을 입력하세요");
+        alert("이름을 입력하세요.");
         return;
     }
     if (userEmail == "") {
-        alert("이메일을 입력하세요");
+        alert("이메일을 입력하세요.");
         return;
     }
     /*if (userEmailCheck == "") {
-        alert("인증번호를 입력하세요");
+        alert("인증번호를 입력하세요.");
         return;
     }*/
     if (userPhone == "") {
-        alert("휴대전화번호를 입력하세요");
+        alert("전화번호를 입력하세요.");
         return;
     }
+    if (userAddr1 == "") {
+        alert("주소찾기를 눌러서 주소를 입력하세요.");
+        return;
+    }
+    if (userAddr2 == "") {
+        alert("주소를 입력하세요.");
+        return;
+    }
+    if (userAddr3 == "") {
+        alert("상세주소를 입력하세요.");
+        return;
+    }
+
 }
