@@ -1,3 +1,16 @@
+//아이디 입력되었으면 오류메세지 사라지게 만들기
+/*function IdCheck(f) {
+    var userId = f.userId.value;
+    if (userId != "") {
+        *//*document.getElementById("id_input_re_1").style.display = 'none';*//*
+        document.getElementsByClassName("IdErrors").style.display = 'none';
+    }
+    if (userId == "") {
+        document.getElementsByClassName("IdErrors").style.display = 'block';
+    }
+}*/
+
+
 function emailSend(f) {
     var userEmail = f.userEmail.value;
 
@@ -20,3 +33,6 @@ function mailFormCheck(email) {
     var form = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     return form.test(email);
 }
+
+
+//회원가입 유효성 검사
