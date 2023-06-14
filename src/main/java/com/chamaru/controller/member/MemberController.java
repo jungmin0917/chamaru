@@ -1,6 +1,7 @@
 package com.chamaru.controller.member;
 
 import com.chamaru.service.member.JoinService;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +20,6 @@ public class MemberController {
     @GetMapping("/join")
     public String join(@ModelAttribute JoinForm joinForm) {
 
-        //return "member/join";
         return "member/joinPage";
     }
 
@@ -27,21 +27,28 @@ public class MemberController {
     public String joinPost(@Valid JoinForm joinForm, Errors errors) {
         joinValidator.validate(joinForm, errors);
 
-        System.out.println(123);
-
         if (errors.hasErrors()) {
-            return "member/joinPage";
+            System.out.println("오류 발생");
+            return "/member/joinPage";
+        } else {
+            System.out.println("정상");
+            joinService.join(joinForm);
+
+            return "redirect:/member/login";
         }
 
-        joinService.join(joinForm);
-
-        return "redirect:/member/login";
     }
+
 
     @GetMapping("/login")
     public String login(@ModelAttribute LoginForm loginForm) {
 
-        //return "member/login";
         return "member/loginPage";
     }
+
+   /* @GetMapping("/mail")
+    public void mail(String userEmail) {
+
+        System.out.println(userEmail);
+    }*/
 }

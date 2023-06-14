@@ -51,16 +51,17 @@
           <div class="emailErrors" th:each="err : ${#fields.errors('userEmail')}" th:text="${err}"></div>
         </div>
         <!--이메일 체크 부분-->
-        <div class="email_check_wrap">
+        <!--<div class="email_check_wrap">
           <div class="email_check_name" th:text="#{userEmailCheck}"></div>
           <div class="email_check_input_box">
             <input class="email_check_input" type="text" name="userEmailCheck" th:field="*{userEmailCheck}">
           </div>
           <div class="email_check_button_wrap">
-            <input type="button" class="email_check_button" th:value="#{member.btn.emailCheck}" onclick="sendMail(this.form)">
+            &lt;!&ndash;<input type="button" class="email_check_button" th:value="#{member.btn.emailCheck}" onclick="emailSend(this.form)">&ndash;&gt;
+            <button type="button" class="email_check_button" th:text="#{member.btn.emailCheck}" style="cursor:pointer" onclick="emailSend(email)"></button>
           </div>
         </div>
-        <div class="emailCheckErrors" th:each="err : ${#fields.errors('userEmailCheck')}" th:text="${err}"></div>
+        <div class="emailCheckErrors" th:each="err : ${#fields.errors('userEmailCheck')}" th:text="${err}"></div>-->
         <!--휴대전화번호 부분-->
         <div class="phone_wrap">
           <div class="phone_name" th:text="#{userPhone}"></div>
@@ -69,9 +70,33 @@
           </div>
           <div class="phoneErrors" th:each="err : ${#fields.errors('userPhone')}" th:text="${err}"></div>
         </div>
+        <!--주소1 부분-->
+        <div class="address1_wrap">
+          <div class="address1_name" th:text="#{userAddr1}"></div>
+          <div class="address1_input_box">
+            <input class="address1_input" type="text" name="userAddr1" th:field="*{userAddr1}">
+          </div>
+          <div class="address1_button_wrap">
+            <button type="button" class="address1_button" th:text="#{member.btn.addr}" style="cursor:pointer" onclick="emailSend(email)"></button>
+          </div>
+        </div>
+        <!--주소2 부분-->
+        <div class="address2_wrap">
+          <div class="address2_input_box">
+            <input class="address2_input" type="text" name="userAddr2" th:field="*{userAddr2}">
+          </div>
+          <div class="address2Errors" th:each="err : ${#fields.errors('userAddr2')}" th:text="${err}"></div>
+        </div>
+        <!--상세주소 부분-->
+        <div class="address3_wrap">
+          <div class="address3_input_box">
+            <input class="address3_input" type="text" name="userAddr3" th:field="*{userAddr3}">
+          </div>
+          <div class="address3Errors" th:each="err : ${#fields.errors('userAddr3')}" th:text="${err}"></div>
+        </div>
         <!--회원가입 버튼 부분-->
         <div class="join_button_wrap">
-          <button type="submit" class="join_button" th:text="#{member.btn.join}" style="cursor:pointer"></button>
+          <button type="submit" class="join_button" th:text="#{member.btn.join}" style="cursor:pointer" onclick="join(this.form)"></button>
         </div>
       </form>
     </div>

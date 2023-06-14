@@ -224,7 +224,7 @@
 	float: right;
 	width: 30%;
 	text-align: center;
-	font-size: 30px;
+	font-size: 22px;
 	font-weight: 900;
 	background-color: gray;
 	cursor: pointer;
@@ -273,6 +273,107 @@
     color: red;
 }
 
+
+/* 주소입력부분*/
+.address1_wrap {
+	width: 50%;
+	height: 96px;
+	margin-top: 20px;
+	margin: auto;
+}
+
+.address1_name {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.address1_input_box {
+	border: 1px solid gray;
+	height: 31px;
+	padding: 10px 14px;
+	float: left;
+	width: 60%;
+}
+
+.address1_input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-size: 28px;
+}
+
+.address1_button {
+	border: 1px solid black;
+	height: 51px;
+	float: right;
+	width: 30%;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 900;
+	background-color: gray;
+	cursor: pointer;
+	color: white;
+}
+
+.address1_button:hover {
+	background-color: white;
+	color:gray;
+}
+
+.address1Errors {
+    color: red;
+    width: 50%;
+    margin: auto;
+}
+
+
+.address2_wrap {
+	width: 50%;
+	margin-top: 20px;
+	margin: auto;
+}
+
+.address2_input_box {
+	border: 1px solid gray;
+	height: 31px;
+	padding: 10px 14px;
+}
+
+.address2_input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-size: 28px;
+}
+
+.address2Errors {
+    color: red;
+}
+
+
+.address3_wrap {
+	width: 50%;
+	padding-top: 15px;
+	margin-top: 20px;
+	margin: auto;
+}
+
+.address3_input_box {
+	border: 1px solid gray;
+	height: 31px;
+	padding: 10px 14px;
+}
+
+.address3_input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-size: 28px;
+}
+
+.address3Errors {
+    color: red;
+}
 
 /* 가입하기 버튼 */
 .join_button_wrap {
