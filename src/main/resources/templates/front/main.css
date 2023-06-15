@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    
 }
 
 
@@ -209,16 +208,16 @@ img {
     width: inherit;
     height: 50px;
     text-align: center;
-    margin: 0 1rem 1rem 0;
+    margin: 0 1rem 2rem 0;
     padding: 1rem;
 }
 /* 차 사진 - E */
 
 /* 서브 광고 - S */
-.sub-admin {
+.sub-admin-banner {
     width: 100%;
     height: 150px;
-    cursor: pointer;
+    padding: 0 1rem 0 1rem;
 }
 /* 서브 광고 - E */
 

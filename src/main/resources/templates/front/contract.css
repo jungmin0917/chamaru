@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 800px;
+    margin: 0 0 0 5rem;
+    height: 5000px;
+}
+
+/* 계약 요청 header - S */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 2rem 0;
+}
+
+svg {
+    display: inline-block;
+}
+
+.back-btn {
+    display: inline-block;
+}
+
+.contract-header {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.to-main {
+    cursor: pointer;
+    display: inline-block;
+    background-color: #0BA252;
+    width: 60px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px 0 0 0;
+    color: white;
+}
+/* 계약 요청 header - E */
+
+/* 차 정보 - S */
+#contract-car {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin: 0 0 3rem 0;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 0 1rem 0 0;
+}
+
+.car-information {
+    margin: 0.5rem 0 0 0;
+}
+
+.car-information1 {
+    font-size: 12px;
+}
+
+.car-information2 {
+    font-size: 12px;
+    color : #aaa;
+    margin: 0 0 0.5rem 0;
+}
+
+.car-information3 {
+    font-size: 12px;
+    font-weight: bold;
+    color : #aaa;
+}
+/* 차 정보 - E */
+
+/* 월 대여료 - S */
+#rent-for-month {
+    margin: 2rem 0 2rem 0;
+}
+
+.rent-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 2rem 0;
+}
+
+div span {
+    font-size: 14px;
+}
+
+.vat {
+    color: #aaa;
+}
+
+.rent-select {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #0BA252;
+    border-radius: 5px;
+}
+/* 월 대여료 - E */
+
+/* 보증금 - S */
+#deposit {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 2rem 0;
+}
+
+.deposit-required {
+    color: #ccc;
+}
+/* 보증금 - E */
+
+/* 차량 수령지 - S */
+#car-destination {
+    margin: 0 0 2rem 0;
+}
+.car-destination-name {
+    margin: 0 0 1rem 0;
+}
+
+select {
+    margin: 0 4rem 0 0;
+    display: inline-block;
+    width: 40%;
+    height: 50px;
+}
+/* 차량 수령지 - E */
+
+/* 계약 정보 - S */
+label {
+    padding: 0.5rem 0.5rem ;
+    margin: 0 1rem 0 0;
+}
+
+input {
+    border: none;
+}
+
+.user {
+    border: 1px solid #ccc;
+    display: flex;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px 5px;
+    margin: 0 0 1rem 0;
+}
+
+
+.manager {
+    border: 1px solid #ccc;
+    display: flex;
+    height: 50px;
+    border-radius: 10px 5px;
+    margin: 0 0 1rem 0;
+}
+
+.birth {
+    border: 1px solid #ccc;
+    display: flex;
+    height: 50px;
+    border-radius: 10px 5px;
+    margin: 0 0 1rem 0;
+}
+
+.mobile {
+    border: 1px solid #ccc;
+    display: flex;
+    height: 50px;
+    border-radius: 10px 5px;
+    margin: 0 0 1rem 0;
+}
+/* 계약 정보 - E */
+
+/* 주요 계약 조건 - S */
+.minimum-credit-level {
+    display: inline-block;
+    color: #aaa;
+    padding: 0 0.5rem 0 0;
+}
+
+.takeover {
+    display: inline-block;
+    color: #aaa;
+    padding: 0 0.5rem 0 0;
+}
+
+.included {
+    display: inline-block;
+    color: #aaa;
+    padding: 0 0.5rem 0 0;
+}
+
+.maintenance {
+    display: inline-block;
+    color: #aaa;
+    padding: 0 0.5rem 0 0;
+}
+/* 주요 계약 조건 - E */
+
+/* 책임한도 - S */
+table {
+    width: 100%;
+    text-align: left;
+}
+
+th {
+    color: #aaa;
+}
+/* 책임한도 - E */
+
+/* 면책금 - S */
+#indemnity {
+    margin: 3rem 0 0 0;
+}
+/* 면책금 - E */
+
+
+/* 운전자 정보 - S */
+
+#driver {
+    margin: 3rem 0;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+.driver-option {
+    margin: 2rem 0;
+}
+
+/* 운전자 정보 - E */
