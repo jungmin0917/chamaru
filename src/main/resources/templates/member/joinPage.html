@@ -25,7 +25,7 @@
         <div class="pw_wrap">
           <div class="pw_name" th:text="#{userPw}"></div>
           <div class="pw_input_box">
-            <input class="pw_input" type="password" name="userPw" th:field="*{userPw}">
+            <input class="pw_input" type="password" name="userPw" id="userPw" th:field="*{userPw}">
           </div>
           <div class="pwErrors" th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
         </div>
