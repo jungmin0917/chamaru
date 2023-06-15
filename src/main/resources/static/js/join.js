@@ -1,3 +1,4 @@
+code = "";
 
 /*인증코드 보내기*/
 function emailSend(f) {
@@ -17,15 +18,21 @@ function emailSend(f) {
         return;
     } else {
         //이메일 형식이 맞으면
-        alert("인증메일을 보냈습니다!\n인증번호를 입력하세요!\n"+userEmail);
+        alert("인증메일을 보냈습니다!\n인증코드를 입력하세요!\n");
         f.userEmailCheck.focus();
 
         $.ajax({
                 type:"GET",
-                url:"/member/sendmail?userEmail=" + userEmail
+                url:"/member/sendmail?userEmail=" + userEmail,
+                success:function(data){
+                    code = data;
+                    console.log("code : " + code);
+                    $("#codeNum").attr("value", code);
+                }
         });
     }
 }
+
 
 
 //이메일 정규식
@@ -104,57 +111,52 @@ function join(f) {
     var userAddr1 = f.userAddr1.value;
     var userAddr2 = f.userAddr2.value;
     var userAddr3 = f.userAddr3.value;
+    /*var mailNumCheck = f.mailNumCheck.value;*/
+    var codeNum = f.codeNum.value;
+
     if (userId == "") {
-        alert("아이디를 입력하세요");
+        alert("아이디를 입력하세요.");
         return;
-    }
-    if (userId.length < 8) {
+    } else if (userId.length < 8) {
         alert("아이디는 8자리 이상으로 입력하세요.");
         return;
-    }
-    if (userPw == "") {
+    } else if (userPw == "") {
         alert("비밀번호를 입력하세요.");
         return;
-    }
-    if (userPw.length < 8) {
+    } else if (userPw.length < 8) {
         alert("비밀번호는 8자리 이상으로 입력하세요.");
         return;
-    }
-    if (userPwRe == "") {
+    } else if (userPwRe == "") {
         alert("비밀번호 확인을 입력하세요.");
         return;
-    }
-
-    if (userPw != userPwRe) {
+    } else if (userPw != userPwRe) {
         alert("비밀번호가 일치하지 않습니다.");
         return;
-    }
-
-    if (userNm == "") {
+    } else if (userNm == "") {
         alert("이름을 입력하세요.");
         return;
-    }
-    if (userEmail == "") {
+    } else if (userEmail == "") {
         alert("이메일을 입력하세요.");
         return;
-    }
-    if (userEmailCheck == "") {
-        alert("인증번호를 입력하세요.");
+    } else if (!mailFormCheck(userEmail)) {
+        alert("이메일 형식이 아닙니다");
         return;
-    }
-    if (userPhone == "") {
+    } else if (userEmailCheck == "") {
+        alert("인증코드를 입력하세요.");
+        return;
+    } else if (userEmailCheck != codeNum) {
+        alert("인증코드를 다시 확인해주세요.");
+        return;
+    } else if (userPhone == "") {
         alert("전화번호를 입력하세요.");
         return;
-    }
-    if (userAddr1 == "") {
+    } else if (userAddr1 == "") {
         alert("주소찾기를 눌러서 주소를 입력하세요.");
         return;
-    }
-    if (userAddr2 == "") {
+    } else if (userAddr2 == "") {
         alert("주소를 입력하세요.");
         return;
-    }
-    if (userAddr3 == "") {
+    } else if (userAddr3 == "") {
         alert("상세주소를 입력하세요.");
         return;
     }

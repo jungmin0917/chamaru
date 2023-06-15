@@ -54,10 +54,11 @@
           <div class="emailErrors" th:each="err : ${#fields.errors('userEmail')}" th:text="${err}"></div>
         </div>
         <!--이메일 체크 부분-->
+        <input type="hidden" id="codeNum" name="codeNum" th:field="*{codeNum}">
         <div class="email_check_wrap">
           <div class="email_check_name" th:text="#{userEmailCheck}"></div>
           <div class="email_check_input_box">
-            <input class="email_check_input" type="text" name="userEmailCheck" th:field="*{userEmailCheck}">
+            <input class="email_check_input" type="text" name="userEmailCheck" th:field="*{userEmailCheck}" oninput="emailCheck(this.form)">
           </div>
           <div class="email_check_button_wrap">
             <button type="button" class="email_check_button" th:text="#{member.btn.emailCheck}" style="cursor:pointer" onclick="emailSend(this.form)"></button>

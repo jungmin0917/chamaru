@@ -31,13 +31,28 @@ public class MailController {
         /* 이메일 보내기 */
         String setFrom = "chamaru <khs0808sky@gmail.com>";
         String toMail = userEmail;
-        String title = "회원가입 인증 이메일 입니다.";
-        String content =
+        String title = "차마루 회원가입 인증 이메일 입니다.";
+        /*String content =
                 "chamaru홈페이지를 방문해주셔서 감사합니다." +
                         "<br><br>" +
                         "인증 번호는 <b>" + checkNum + "</b> 입니다." +
                         "<br>" +
-                        "해당 인증번호를 인증번호란에 기입하여 주세요.";
+                        "해당 인증코드를 인증코드란에 기입하여 주세요.";*/
+        String content="";
+        content+= "<div style='margin:20px;'>";
+        content+= "<h1> 안녕하세요 차마루입니다. </h1>";
+        content+= "<br>";
+        content+= "<p>해당 인증코드를 인증코드란에 기입하여 주세요.<p>";
+        content+= "<br>";
+        content+= "<p>감사합니다.<p>";
+        content+= "<br>";
+        content+= "<div align='center' style='border:1px solid black; font-family:verdana';>";
+        content+= "<h3 style='color:blue;'>회원가입 인증코드입니다.</h3>";
+        content+= "<div style='font-size:130%'>";
+        content+= "CODE : <strong>";
+        content+= checkNum+"</strong><div><br/> ";
+        content+= "</div>";
+
         try {
             MimeMessage mail = javaMailSender.createMimeMessage();
             MimeMessageHelper mailHelper = new MimeMessageHelper(mail,true,"UTF-8"); // true는 멀티파트 메세지를 사용하겠다는 의미
@@ -68,8 +83,8 @@ public class MailController {
 
 
         String num = Integer.toString(checkNum);
-        System.out.println("전달한 번호는 " + num + "입니다.");
-        return "[{'param':" + num + "}]";
+        System.out.println("전달한 코드는 " + num + "입니다.");
+        return num;
     }
 
 

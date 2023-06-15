@@ -23,6 +23,8 @@ public class JoinForm {
     @NotBlank
     private String userNm;
 
+    private String codeNum;
+
     @NotBlank
     @Email
     private String userEmail;
