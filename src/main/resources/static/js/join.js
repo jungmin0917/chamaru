@@ -136,14 +136,13 @@ function join(f) {
     var userAddr1 = f.userAddr1.value;
     var userAddr2 = f.userAddr2.value;
     var userAddr3 = f.userAddr3.value;
-    /*var mailNumCheck = f.mailNumCheck.value;*/
     var codeNum = f.codeNum.value;
 
     if (userId == "") {
         alert("아이디를 입력하세요.");
         return;
-    } else if (userId.length < 8) {
-        alert("아이디는 8자리 이상으로 입력하세요.");
+    } else if (userId.length < 8 || userId.length > 20) {
+        alert("아이디는 8자리 ~ 20자리 이내로 입력해주세요.");
         return;
     } else if (userPw == "") {
         alert("비밀번호를 입력하세요.");
