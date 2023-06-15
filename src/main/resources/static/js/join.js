@@ -1,37 +1,31 @@
-//아이디 입력되었으면 오류메세지 사라지게 만들기
-/*function idCheck(f) {
-    var userId = f.userId.value;
-    if (userId != "") {
-        document.getElementById("id_input_re_1").style.display = 'none';
-        *//*document.getElementsByClassName("IdErrors").style.display = 'none';*//*
-    }
-    if (userId == "") {
-        document.getElementById("id_input_re_1").style.display = 'block';
-        *//*document.getElementsByClassName("IdErrors").style.display = 'block';*//*
-    }
-}*/
 
-
-/*function emailSend(f) {
+/*인증코드 보내기*/
+function emailSend(f) {
     var userEmail = f.userEmail.value;
     var userEmailCheck = f.userEmailCheck.value;
 
     if (userEmail == "") {
         alert("이메일을 입력하세요");
+        f.userEmail.focus();
         return;
     }
 
     //이메일 형식이 맞는지 체크
     if (!mailFormCheck(userEmail)) {
         alert("이메일 형식이 아닙니다");
+        f.userEmail.focus();
         return;
+    } else {
+        //이메일 형식이 맞으면
+        alert("인증메일을 보냈습니다!\n인증번호를 입력하세요!\n"+userEmail);
+        f.userEmailCheck.focus();
+
+        $.ajax({
+                type:"GET",
+                url:"/member/sendmail?userEmail=" + userEmail
+        });
     }
-    //이메일 형식이 맞으면
-    alert("인증메일을 보냈습니다!\n인증번호를 입력하세요!\n"+userEmail);
-    f.method="get";
-    f.action="/member/mail;
-    f.submit();
-}*/
+}
 
 
 //이메일 정규식
@@ -105,7 +99,7 @@ function join(f) {
     var userPwRe = f.userPwRe.value;
     var userNm = f.userNm.value;
     var userEmail = f.userEmail.value;
-    /*var userEmailCheck = f.userEmailCheck.value;*/
+    var userEmailCheck = f.userEmailCheck.value;
     var userPhone = f.userPhone.value;
     var userAddr1 = f.userAddr1.value;
     var userAddr2 = f.userAddr2.value;
@@ -120,6 +114,10 @@ function join(f) {
     }
     if (userPw == "") {
         alert("비밀번호를 입력하세요.");
+        return;
+    }
+    if (userPw.length < 8) {
+        alert("비밀번호는 8자리 이상으로 입력하세요.");
         return;
     }
     if (userPwRe == "") {
@@ -140,10 +138,10 @@ function join(f) {
         alert("이메일을 입력하세요.");
         return;
     }
-    /*if (userEmailCheck == "") {
+    if (userEmailCheck == "") {
         alert("인증번호를 입력하세요.");
         return;
-    }*/
+    }
     if (userPhone == "") {
         alert("전화번호를 입력하세요.");
         return;

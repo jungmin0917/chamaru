@@ -27,8 +27,8 @@ public class JoinForm {
     @Email
     private String userEmail;
 
-    /*@NotBlank
-    private String userEmailCheck;*/
+    @NotBlank
+    private String userEmailCheck;
 
     @NotBlank
     private String userPhone;
