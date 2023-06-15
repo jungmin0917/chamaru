@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계약 요청</title>
+    <link rel="stylesheet" href="./contract.css">
+</head>
+<body>
+    <header>
+        <div class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+        </div>
+        <div class="contract-header">
+            계약 요청
+        </div>
+        <a href="./main.html">
+            <div class="to-main">처음으로</div>
+        </a>
+    </header>
+    <div id="contract-car">
+        <div class="car-image">
+            <img src="./image/K3.jpg" alt="">
+        </div>
+        <div class="car-information">
+            <b>기아 올 뉴K3</b>
+            <div class="car-information1">1.6 가솔린</div>
+            <div class="car-information2">2019.05, 85,000km, 휘발유</div>
+            <div class="car-information3">렌트114</div>
+        </div>
+    </div>
+    <div>대여료 선택</div>
+    <div id="rent-for-month">
+        <div class="rent-header">
+            <div>
+                <b>월 대여료</b>
+                <span>만 26세 이상 기준</span>
+            </div>
+            <div>
+                <span class="vat">(VAT 포함)</span>
+            </div>
+        </div>
+        <div class="rent-select">
+
+        </div>
+    </div>
+    <div id="deposit">
+        <div>
+            <b>보증금</b>
+        </div>
+        <div>
+            <span class="deposit-required">대여료 선택 필수</span>
+        </div>
+    </div>
+    <div id="car-destination">
+        <div class="car-destination-name">
+            차량 수령지
+        </div>
+        
+        <select name="korea" id="destination">
+            <option value="서울특별시">서울특별시</option>
+            <option value="경기도">경기도</option>
+        </select>
+        <select name="city" id=""></select>
+    </div>
+    <div id="contract-infomation">
+        <h4>계약자 정보</h4>
+        <div class="user">
+            <div>
+                <label for="user">회원구분</label>
+                <input type="radio" name="user" id="user">
+                <label for="user">개인</label>
+                <input type="radio" name="user" id="user">
+                <label for="user">개인사업자</label>
+                <input type="radio" name="user" id="user">
+                <label for="user">법인</label>
+            </div>
+        </div>
+        <div class="manager">
+            <label for="manager">담당자명</label>
+            <input type="text" name="manager" id="manager" value="강현우">
+        </div>
+        <div class="birth">
+            <label for="birth">생년월일</label>
+            <input type="text" name="birth" id="bitrh" placeholder="예)19950308">
+        </div>
+        <div class="mobile">
+            <label for="mobile">휴대전화번호</label>
+            <input type="text" name="mobile" id="mobile" placeholder="휴대전화번호 입력">
+        </div>
+    </div>
+    <div id="">
+        <h4>주요 계약 조건</h4>
+        <div id="contract-condition">
+            <div>
+                <span class="minimum-credit-level">최소 신용등급</span>
+                <span>신용무관</span>
+            </div>
+            <div>
+                <span class="takeover">만기인수</span>
+                <span>불가</span>
+            </div>
+            <div>
+                <span class="included">포함항목</span>
+                <span>자동차세, 보험료, 정비료</span>
+            </div>
+            <div>
+                <span class="maintenance">정비조건</span>
+                <span>포함</span>
+            </div>
+        </div>
+    </div>
+    <div id="liability limit">
+        <h4>책임한도</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>대인</th>
+                    <th>대물</th>
+                    <th>자손</th>
+                    <th>무보험상해</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>무제한</td>
+                    <td>1억</td>
+                    <td>1,500만원</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="indemnity">
+        <h4>면책금</h4>
+        <table>
+            <thead>
+                <th>대인</th>
+                <th>대물</th>
+                <th>자차</th>
+            </thead>
+            <tbody>
+                <td>50만원</td>
+                <td>50만원</td>
+                <td>50만원</td>
+            </tbody>
+        </table>
+    </div>
+    <div id="driver">
+        <h3>운전자 정보</h3>
+        <div class="driver-option">
+            <input type="radio" name="fdriver" id="fdriver">
+            <label for="fdriver">제1 운전자</label>
+            <input type="radio" name="sdriver" id="sdriver">
+            <label for="sdriver">제2 운전자</label>
+        </div>
+        
+        <div class="">
+            <label for="dname">이름</label>
+            <input type="text" name="dname" id="dname" placeholder="한글 실명 입력">
+        </div>
+    </div>
+</body>
+</html>
