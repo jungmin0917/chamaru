@@ -1,0 +1,13 @@
+spring:
+  mail:
+    # Google smtp server 사용
+    host: smtp.gmail.com
+    port: 587
+    username: khs0808sky@gmail.com
+    password: httjsotakddfgwns
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
