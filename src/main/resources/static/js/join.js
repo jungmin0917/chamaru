@@ -1,43 +1,69 @@
-//아이디 입력되었으면 오류메세지 사라지게 만들기
-/*function idCheck(f) {
-    var userId = f.userId.value;
-    if (userId != "") {
-        document.getElementById("id_input_re_1").style.display = 'none';
-        *//*document.getElementsByClassName("IdErrors").style.display = 'none';*//*
-    }
-    if (userId == "") {
-        document.getElementById("id_input_re_1").style.display = 'block';
-        *//*document.getElementsByClassName("IdErrors").style.display = 'block';*//*
-    }
-}*/
+code = "";
 
-
-/*function emailSend(f) {
+/*인증코드 보내기*/
+function emailSend(f) {
     var userEmail = f.userEmail.value;
     var userEmailCheck = f.userEmailCheck.value;
 
     if (userEmail == "") {
         alert("이메일을 입력하세요");
+        f.userEmail.focus();
         return;
     }
 
     //이메일 형식이 맞는지 체크
     if (!mailFormCheck(userEmail)) {
         alert("이메일 형식이 아닙니다");
+        f.userEmail.focus();
         return;
+    } else {
+        //이메일 형식이 맞으면
+        alert("인증메일을 보냈습니다!\n인증코드를 입력하세요!\n");
+        f.userEmailCheck.focus();
+
+        $.ajax({
+                type:"GET",
+                url:"/member/sendmail?userEmail=" + userEmail,
+                success:function(data){
+                    code = data;
+                    console.log("code : " + code);
+                    $("#codeNum").attr("value", code);
+                }
+        });
     }
-    //이메일 형식이 맞으면
-    alert("인증메일을 보냈습니다!\n인증번호를 입력하세요!\n"+userEmail);
-    f.method="get";
-    f.action="/member/mail;
-    f.submit();
-}*/
+}
+
 
 
 //이메일 정규식
 function mailFormCheck(email) {
     var form = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     return form.test(email);
+}
+
+//비밀번호 정규식
+function chkPW(){
+
+ var pw = $("#userPw").val();
+ var num = pw.search(/[0-9]/g);
+ var eng = pw.search(/[a-z]/ig);
+ var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+
+ if(pw.length < 8 || pw.length > 20){
+
+  alert("8자리 ~ 20자리 이내로 입력해주세요.");
+  return false;
+ }else if(pw.search(/\s/) != -1){
+  alert("비밀번호는 공백 없이 입력해주세요.");
+  return false;
+ }else if(num < 0 || eng < 0 || spe < 0 ){
+  alert("영문, 숫자, 특수문자를 혼합하여 입력해주세요.");
+  return false;
+ }else {
+	console.log("통과");
+    return true;
+ }
+
 }
 
 //다음 주소록 연동하기
@@ -105,58 +131,55 @@ function join(f) {
     var userPwRe = f.userPwRe.value;
     var userNm = f.userNm.value;
     var userEmail = f.userEmail.value;
-    /*var userEmailCheck = f.userEmailCheck.value;*/
+    var userEmailCheck = f.userEmailCheck.value;
     var userPhone = f.userPhone.value;
     var userAddr1 = f.userAddr1.value;
     var userAddr2 = f.userAddr2.value;
     var userAddr3 = f.userAddr3.value;
+    var codeNum = f.codeNum.value;
+
     if (userId == "") {
-        alert("아이디를 입력하세요");
+        alert("아이디를 입력하세요.");
         return;
-    }
-    if (userId.length < 8) {
-        alert("아이디는 8자리 이상으로 입력하세요.");
+    } else if (userId.length < 8 || userId.length > 20) {
+        alert("아이디는 8자리 ~ 20자리 이내로 입력해주세요.");
         return;
-    }
-    if (userPw == "") {
+    } else if (userPw == "") {
         alert("비밀번호를 입력하세요.");
         return;
-    }
-    if (userPwRe == "") {
+    } else if (!chkPW()) {
+        return;
+    } else if (userPwRe == "") {
         alert("비밀번호 확인을 입력하세요.");
         return;
-    }
-
-    if (userPw != userPwRe) {
+    } else if (userPw != userPwRe) {
         alert("비밀번호가 일치하지 않습니다.");
         return;
-    }
-
-    if (userNm == "") {
+    } else if (userNm == "") {
         alert("이름을 입력하세요.");
         return;
-    }
-    if (userEmail == "") {
+    } else if (userEmail == "") {
         alert("이메일을 입력하세요.");
         return;
-    }
-    /*if (userEmailCheck == "") {
-        alert("인증번호를 입력하세요.");
+    } else if (!mailFormCheck(userEmail)) {
+        alert("이메일 형식이 아닙니다");
         return;
-    }*/
-    if (userPhone == "") {
+    } else if (userEmailCheck == "") {
+        alert("인증코드를 입력하세요.");
+        return;
+    } else if (userEmailCheck != codeNum) {
+        alert("인증코드를 다시 확인해주세요.");
+        return;
+    } else if (userPhone == "") {
         alert("전화번호를 입력하세요.");
         return;
-    }
-    if (userAddr1 == "") {
+    } else if (userAddr1 == "") {
         alert("주소찾기를 눌러서 주소를 입력하세요.");
         return;
-    }
-    if (userAddr2 == "") {
+    } else if (userAddr2 == "") {
         alert("주소를 입력하세요.");
         return;
-    }
-    if (userAddr3 == "") {
+    } else if (userAddr3 == "") {
         alert("상세주소를 입력하세요.");
         return;
     }

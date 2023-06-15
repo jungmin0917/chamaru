@@ -25,7 +25,7 @@
         <div class="pw_wrap">
           <div class="pw_name" th:text="#{userPw}"></div>
           <div class="pw_input_box">
-            <input class="pw_input" type="password" name="userPw" th:field="*{userPw}">
+            <input class="pw_input" type="password" name="userPw" id="userPw" th:field="*{userPw}">
           </div>
           <div class="pwErrors" th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
         </div>
@@ -54,17 +54,17 @@
           <div class="emailErrors" th:each="err : ${#fields.errors('userEmail')}" th:text="${err}"></div>
         </div>
         <!--이메일 체크 부분-->
-        <!--<div class="email_check_wrap">
+        <input type="hidden" id="codeNum" name="codeNum" th:field="*{codeNum}">
+        <div class="email_check_wrap">
           <div class="email_check_name" th:text="#{userEmailCheck}"></div>
           <div class="email_check_input_box">
-            <input class="email_check_input" type="text" name="userEmailCheck" th:field="*{userEmailCheck}">
+            <input class="email_check_input" type="text" name="userEmailCheck" th:field="*{userEmailCheck}" oninput="emailCheck(this.form)">
           </div>
           <div class="email_check_button_wrap">
-            &lt;!&ndash;<input type="button" class="email_check_button" th:value="#{member.btn.emailCheck}" onclick="emailSend(this.form)">&ndash;&gt;
-            <button type="button" class="email_check_button" th:text="#{member.btn.emailCheck}" style="cursor:pointer" onclick="emailSend(email)"></button>
+            <button type="button" class="email_check_button" th:text="#{member.btn.emailCheck}" style="cursor:pointer" onclick="emailSend(this.form)"></button>
           </div>
         </div>
-        <div class="emailCheckErrors" th:each="err : ${#fields.errors('userEmailCheck')}" th:text="${err}"></div>-->
+        <div class="emailCheckErrors" th:each="err : ${#fields.errors('userEmailCheck')}" th:text="${err}"></div>
         <!--휴대전화번호 부분-->
         <div class="phone_wrap">
           <div class="phone_name" th:text="#{userPhone}"></div>

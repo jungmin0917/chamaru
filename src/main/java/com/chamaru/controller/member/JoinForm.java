@@ -10,11 +10,11 @@ import lombok.Data;
 public class JoinForm {
 
     @NotBlank
-    @Size(min = 8)
+    @Size(min = 8, max = 20)
     private String userId;
 
     @NotBlank
-    @Size(min = 8)
+    @Size(min = 8, max= 20)
     private String userPw;
 
     @NotBlank
@@ -23,12 +23,14 @@ public class JoinForm {
     @NotBlank
     private String userNm;
 
+    private String codeNum;
+
     @NotBlank
     @Email
     private String userEmail;
 
-    /*@NotBlank
-    private String userEmailCheck;*/
+    @NotBlank
+    private String userEmailCheck;
 
     @NotBlank
     private String userPhone;

@@ -51,7 +51,7 @@
 .joinPageMessage span {
     font-size: 20px;
     font-weight: 600;
-	color: #0BA252;
+	color: #5F6544;
 }
 
 /* 아이디 부분*/
@@ -80,7 +80,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
 .id_input:focus {
@@ -117,7 +117,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
 .pw_input:focus {
@@ -155,7 +155,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
 .pwRe_input:focus {
@@ -193,7 +193,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
 .nm_input:focus {
@@ -231,7 +231,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
 .email_input:focus {
@@ -244,7 +244,7 @@
 
 
 /* 이메일 인증 부분*/
-/*.email_check_wrap {
+.email_check_wrap {
 	width: 50%;
 	height: 96px;
 	margin-top: 20px;
@@ -273,7 +273,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-
+    color: #A9A6DC;
 }
 
 .email_check_input:focus {
@@ -303,7 +303,7 @@
     color: red;
     width: 50%;
     margin: auto;
-}*/
+}
 
 
 
@@ -333,7 +333,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
 .phone_input:focus {
@@ -374,7 +374,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
 .address1_input:focus {
@@ -427,7 +427,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
 .address2_input:focus {
@@ -458,7 +458,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
 .address3_input:focus {
@@ -474,7 +474,7 @@
 .address2_input::placeholder,
 .address3_input::placeholder {
     font-size: 22px;
-    color: #0BA252;
+    color: #99CFA5;
 }
 
 /* 가입하기 버튼 */

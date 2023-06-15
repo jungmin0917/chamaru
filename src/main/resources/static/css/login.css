@@ -17,7 +17,7 @@
 }
 
 /* 페이지 제목 */
-.subject {
+.login_subject {
 	width: 50%;
 	height: 60px;
 	background-color: #0BA252;
@@ -27,7 +27,7 @@
 	border-radius: 15px;
 }
 
-.subject span {
+.login_subject span {
 	margin-left: 31px;
 	font-size: 40px;
 	font-weight: 900;
@@ -35,81 +35,81 @@
 }
 
 /* 아이디 부분*/
-.id_wrap {
+.login_id_wrap {
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
 	padding-top: 15px;
 }
 
-.id_name {
+.login_id_name {
 	font-size: 25px;
 	font-weight: bold;
 	color: #0BA252;
 }
 
-.id_input_box {
+.login_id_input_box {
 	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
 	border-radius: 15px;
 }
 
-.id_input {
+.login_id_input {
 	width: 100%;
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
-.id_input:focus {
+.login_id_input:focus {
     outline:none;
 }
 
-.idErrors {
+.login_idErrors {
     color: red;
 }
 
 /* 비밀번호 부분*/
-.pw_wrap {
+.login_pw_wrap {
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
 	padding-top: 15px;
 }
 
-.pw_name {
+.login_pw_name {
 	font-size: 25px;
 	font-weight: bold;
 	color: #0BA252;
 }
 
-.pw_input_box {
+.login_pw_input_box {
 	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
 	border-radius: 15px;
 }
 
-.pw_input {
+.login_pw_input {
 	width: 100%;
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #0BA252;
+	color: #A9A6DC;
 }
 
-.pw_input:focus {
+.login_pw_input:focus {
     outline:none;
 }
 
-.pwErrors {
+.login_pwErrors {
     color: red;
 }
 
 /*공통 오류*/
-.errors {
+.login_errors {
     width: 50%;
     margin-top: 20px;
     margin: auto;
