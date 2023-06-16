@@ -155,10 +155,47 @@
             <label for="sdriver">제2 운전자</label>
         </div>
         
-        <div class="">
+        <div class="driver-name">
             <label for="dname">이름</label>
             <input type="text" name="dname" id="dname" placeholder="한글 실명 입력">
         </div>
+        <div class="driver-birth">
+            <label for="dbirth">생년월일</label>
+            <input type="text" name="dbirth" id="dbirth" placeholder="예) 19950308">
+        </div>
+        <div class="driver-mobile">
+            <label for="dmobile">생년월일</label>
+            <input type="text" name="dmobile" id="dmobile" placeholder="-없이 입력">
+        </div>
+        <div class="driver-number">
+                <label for="dnumber">면허번호</label>
+                <select name="dnumber" id="dnumber">
+                    <option value="서울">서울</option>
+                </select>
+                <input type="text" name="dnumber" id="dnumber" placeholder="-없이 입력">
+        </div>
     </div>
+
+    <div id="contract-caution">
+        <div>- 본 차량의 보험 적용 연령은 만 26세 이상입니다</div>
+        <div>- 차량 중도해지시 위약율은 30%입니다. (잔여기간에 총 대여료X위약율)</div>
+        <div>- 계약 요청 접수후, 24시간내(평일기준) 해피콜을 통해 계약 진행 여부등을 확정하게 됩니다</div>
+        <div>- 차량의 주행거리와 옵션 등 일부 정보는 실제 정보와 차이가 있을 수 있으니 출고 시 다시 한번 정확히 확인바랍니다</div>
+        <div>- 해당 차량의 정확한 출고 여부를 위해서는 공급업체의 확인이 필요합니다</div>
+        <div>- 월렌트의 경우 요청하신 렌터카 업체 사정에 따라 동급 차량이 배차될 수 있습니다</div>
+    </div>
+
+    <div id="agree">
+        <input type="checkbox" name="agree" id="agree">
+        <label for="agree">개인정보 제3자 제공 및 위탁 동의</label>
+    </div>
+    <div id="all-contract-confirm">
+        <input type="checkbox" name="agree" id="agree">
+        <label for="agree">모든 계약 조건을 확인했습니다</label>
+    </div>
+
+    <footer>
+       <a href=""><div class="contract-request">계약 요청</div></a> 
+    </footer>
 </body>
 </html>
