@@ -34,28 +34,28 @@
 	color: white;
 }
 
-/* 아이디 부분*/
-.login_id_wrap {
+/* 아이디, 비밀번호 부분*/
+.login_common_wrap {
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
 	padding-top: 15px;
 }
 
-.login_id_name {
+.login_common_name {
 	font-size: 25px;
 	font-weight: bold;
 	color: #0BA252;
 }
 
-.login_id_input_box {
+.login_common_input_box {
 	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
 	border-radius: 15px;
 }
 
-.login_id_input {
+.login_common_input {
 	width: 100%;
 	height: 100%;
 	border: none;
@@ -63,48 +63,11 @@
 	color: #A9A6DC;
 }
 
-.login_id_input:focus {
+.login_common_input:focus {
     outline:none;
 }
 
-.login_idErrors {
-    color: red;
-}
-
-/* 비밀번호 부분*/
-.login_pw_wrap {
-	width: 50%;
-	margin-top: 20px;
-	margin: auto;
-	padding-top: 15px;
-}
-
-.login_pw_name {
-	font-size: 25px;
-	font-weight: bold;
-	color: #0BA252;
-}
-
-.login_pw_input_box {
-	border: 1px solid #0BA252;
-	height: 31px;
-	padding: 10px 14px;
-	border-radius: 15px;
-}
-
-.login_pw_input {
-	width: 100%;
-	height: 100%;
-	border: none;
-	font-size: 28px;
-	color: #A9A6DC;
-}
-
-.login_pw_input:focus {
-    outline:none;
-}
-
-.login_pwErrors {
+.login_commonErrors {
     color: red;
 }
 

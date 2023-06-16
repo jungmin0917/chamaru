@@ -25,6 +25,8 @@ public class JoinForm {
 
     private String codeNum;
 
+    private String realEmail;
+
     @NotBlank
     @Email
     private String userEmail;

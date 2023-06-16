@@ -14,47 +14,48 @@
       <form method="post" th:action="@{/member/join}" th:object="${joinForm}">
         <div class="errors" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
         <!--아이디 부분-->
-        <div class="id_wrap">
-          <div class="id_name" th:text="#{userId}"></div>
-          <div class="id_input_box">
-            <input class="id_input" type="text" name="userId" th:field="*{userId}">
+        <div class="join_common_wrap">
+          <div class="join_common_name" th:text="#{userId}"></div>
+          <div class="join_common_input_box">
+            <input class="join_common_input" type="text" name="userId" th:field="*{userId}">
           </div>
-          <div class="idErrors" th:each="err : ${#fields.errors('userId')}" th:text="${err}"></div>
+          <div class="join_commonErrors" th:each="err : ${#fields.errors('userId')}" th:text="${err}"></div>
         </div>
         <!--비밀번호 부분-->
-        <div class="pw_wrap">
-          <div class="pw_name" th:text="#{userPw}"></div>
-          <div class="pw_input_box">
-            <input class="pw_input" type="password" name="userPw" id="userPw" th:field="*{userPw}">
+        <div class="join_common_wrap">
+          <div class="join_common_name" th:text="#{userPw}"></div>
+          <div class="join_common_input_box">
+            <input class="join_common_input" type="password" name="userPw" id="userPw" th:field="*{userPw}">
           </div>
-          <div class="pwErrors" th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
+          <div class="join_commonErrors" th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
         </div>
         <!--비밀번호 확인 부분-->
-        <div class="pwRe_wrap">
-          <div class="pwRe_name" th:text="#{userPwRe}"></div>
-          <div class="pwRe_input_box">
-            <input class="pwRe_input" type="password" name="userPwRe" th:field="*{userPwRe}">
+        <div class="join_common_wrap">
+          <div class="join_common_name" th:text="#{userPwRe}"></div>
+          <div class="join_common_input_box">
+            <input class="join_common_input" type="password" name="userPwRe" th:field="*{userPwRe}">
           </div>
-          <div class="pwReErrors" th:each="err : ${#fields.errors('userPwRe')}" th:text="${err}"></div>
+          <div class="join_commonErrors" th:each="err : ${#fields.errors('userPwRe')}" th:text="${err}"></div>
         </div>
         <!--이름 부분-->
-        <div class="nm_wrap">
-          <div class="nm_name" th:text="#{userNm}"></div>
-          <div class="nm_input_box">
-            <input class="nm_input" type="text" name="userNm" th:field="*{userNm}">
+        <div class="join_common_wrap">
+          <div class="join_common_name" th:text="#{userNm}"></div>
+          <div class="join_common_input_box">
+            <input class="join_common_input" type="text" name="userNm" th:field="*{userNm}">
           </div>
-          <div class="nmErrors" th:each="err : ${#fields.errors('userNm')}" th:text="${err}"></div>
+          <div class="join_commonErrors" th:each="err : ${#fields.errors('userNm')}" th:text="${err}"></div>
         </div>
         <!--이메일 부분-->
-        <div class="email_wrap">
-          <div class="email_name" th:text="#{userEmail}"></div>
-          <div class="email_input_box">
-            <input class="email_input" type="text" name="userEmail" th:field="*{userEmail}">
+        <div class="join_common_wrap">
+          <div class="join_common_name" th:text="#{userEmail}"></div>
+          <div class="join_common_input_box">
+            <input class="join_common_input" id="mail" type="text" name="userEmail" th:field="*{userEmail}">
           </div>
-          <div class="emailErrors" th:each="err : ${#fields.errors('userEmail')}" th:text="${err}"></div>
+          <div class="join_commonErrors" th:each="err : ${#fields.errors('userEmail')}" th:text="${err}"></div>
         </div>
         <!--이메일 체크 부분-->
         <input type="hidden" id="codeNum" name="codeNum" th:field="*{codeNum}">
+        <input type="hidden" id="realEmail" name="realEmail" th:field="*{realEmail}">
         <div class="email_check_wrap">
           <div class="email_check_name" th:text="#{userEmailCheck}"></div>
           <div class="email_check_input_box">
@@ -66,12 +67,12 @@
         </div>
         <div class="emailCheckErrors" th:each="err : ${#fields.errors('userEmailCheck')}" th:text="${err}"></div>
         <!--휴대전화번호 부분-->
-        <div class="phone_wrap">
-          <div class="phone_name" th:text="#{userPhone}"></div>
-          <div class="phone_input_box">
-            <input class="phone_input" type="text" name="userPhone" th:field="*{userPhone}">
+        <div class="join_common_wrap">
+          <div class="join_common_name" th:text="#{userPhone}"></div>
+          <div class="join_common_input_box">
+            <input class="join_common_input" type="text" name="userPhone" th:field="*{userPhone}">
           </div>
-          <div class="phoneErrors" th:each="err : ${#fields.errors('userPhone')}" th:text="${err}"></div>
+          <div class="join_commonErrors" th:each="err : ${#fields.errors('userPhone')}" th:text="${err}"></div>
         </div>
         <!--주소1 부분-->
         <div class="address1_wrap">

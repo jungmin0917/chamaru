@@ -18,9 +18,6 @@ function emailSend(f) {
         return;
     } else {
         //이메일 형식이 맞으면
-        alert("인증메일을 보냈습니다!\n인증코드를 입력하세요!\n");
-        f.userEmailCheck.focus();
-
         $.ajax({
                 type:"GET",
                 url:"/member/sendmail?userEmail=" + userEmail,
@@ -30,6 +27,10 @@ function emailSend(f) {
                     $("#codeNum").attr("value", code);
                 }
         });
+        alert("인증메일을 보냈습니다!\n인증코드를 입력하세요!\n");
+        f.userEmailCheck.focus();
+        document.getElementById('realEmail').value = userEmail;
+        document.getElementById('mail').readOnly = true; // readonly 활성화
     }
 }
 
@@ -44,26 +45,25 @@ function mailFormCheck(email) {
 //비밀번호 정규식
 function chkPW(){
 
- var pw = $("#userPw").val();
- var num = pw.search(/[0-9]/g);
- var eng = pw.search(/[a-z]/ig);
- var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+    var pw = $("#userPw").val();
+    var num = pw.search(/[0-9]/g);
+    var eng = pw.search(/[a-z]/ig);
+    var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
 
- if(pw.length < 8 || pw.length > 20){
-
-  alert("8자리 ~ 20자리 이내로 입력해주세요.");
-  return false;
- }else if(pw.search(/\s/) != -1){
-  alert("비밀번호는 공백 없이 입력해주세요.");
-  return false;
- }else if(num < 0 || eng < 0 || spe < 0 ){
-  alert("영문, 숫자, 특수문자를 혼합하여 입력해주세요.");
-  return false;
- }else {
-	console.log("통과");
-    return true;
- }
-
+    /*if (pw.length < 8 || pw.length > 20) {
+        *//*alert("비밀번호는 8자리 ~ 20자리 이내로 입력해주세요.");*//*
+        return false;
+    } else if (pw.search(/\s/) != -1) {
+        *//*alert("비밀번호는 공백 없이 입력해주세요.");*//*
+        return false;
+    }*/
+    if (num < 0 || eng < 0 || spe < 0 ) {
+        /*alert("비밀번호는 영문, 숫자, 특수문자를 혼합하여 입력해주세요.");*/
+        return false;
+    } else {
+        console.log("통과");
+        return true;
+    }
 }
 
 //다음 주소록 연동하기
@@ -137,50 +137,50 @@ function join(f) {
     var userAddr2 = f.userAddr2.value;
     var userAddr3 = f.userAddr3.value;
     var codeNum = f.codeNum.value;
+    var realEmail = f.realEmail.value;
+    alert(realEmail);
+    alert(codeNum);
 
-    if (userId == "") {
-        alert("아이디를 입력하세요.");
-        return;
-    } else if (userId.length < 8 || userId.length > 20) {
-        alert("아이디는 8자리 ~ 20자리 이내로 입력해주세요.");
-        return;
-    } else if (userPw == "") {
-        alert("비밀번호를 입력하세요.");
-        return;
-    } else if (!chkPW()) {
-        return;
-    } else if (userPwRe == "") {
-        alert("비밀번호 확인을 입력하세요.");
-        return;
-    } else if (userPw != userPwRe) {
-        alert("비밀번호가 일치하지 않습니다.");
-        return;
-    } else if (userNm == "") {
-        alert("이름을 입력하세요.");
-        return;
-    } else if (userEmail == "") {
-        alert("이메일을 입력하세요.");
-        return;
-    } else if (!mailFormCheck(userEmail)) {
-        alert("이메일 형식이 아닙니다");
-        return;
-    } else if (userEmailCheck == "") {
-        alert("인증코드를 입력하세요.");
-        return;
-    } else if (userEmailCheck != codeNum) {
-        alert("인증코드를 다시 확인해주세요.");
-        return;
-    } else if (userPhone == "") {
-        alert("전화번호를 입력하세요.");
-        return;
-    } else if (userAddr1 == "") {
-        alert("주소찾기를 눌러서 주소를 입력하세요.");
-        return;
-    } else if (userAddr2 == "") {
-        alert("주소를 입력하세요.");
-        return;
-    } else if (userAddr3 == "") {
-        alert("상세주소를 입력하세요.");
+    try {
+        const requiredFields = {
+            userId : "아이디를 입력하세요.",
+            userPw : "비밀번호를 입력하세요.",
+            userPwRe : "비밀번호 확인을 입력하세요.",
+            userNm : "이름을 입력하세요.",
+            userEmail : "이메일을 입력하세요.",
+            userEmailCheck : "이메일 인증코드를 입력하세요.",
+            userPhone : "전화번호를 입력하세요.",
+            userAddr1 : "주소찾기를 통해 주소를 입력하세요.",
+            userAddr3 : "상세주소를 입력하세요.",
+        };
+        const fieldsName = {
+            userId : "아이디",
+            userPw : "비밀번호",
+        }
+        const formData = new FormData(f);
+        for (const key in requiredFields) {
+            const value = formData.get(key);
+            const fieldData = requiredFields[key];
+            if (!value.trim()) {
+               throw new Error(fieldData);
+            } else if (key == "userId" && value.trim().length < 8 || value.trim().length > 20) {
+                throw new Error("아이디는 8자리 ~ 20자리 이내로 입력해주세요.");
+            } else if (key == "userPw" && value.trim().length < 8 || value.trim().length > 20) {
+                throw new Error("비밀번호는 8자리 ~ 20자리 이내로 입력해주세요.");
+            } else if (key == "userPw" && !chkPW()) {
+                throw new Error("비밀번호는 영문, 숫자, 특수문자를 혼합하여 입력해주세요.");
+            } else if (key == "userPw" && chkPW() && value != formData.get("userPwRe")) {
+                throw new Error("비밀번호가 일치하지 않습니다.");
+            } else if (key == "userEmail" && !mailFormCheck(value)) {
+                throw new Error("이메일 형식이 아닙니다.");
+            } else if (key == "userEmail" && value != formData.get("realEmail")) {
+                throw new Error("이메일이 변경된 상태입니다.\n이메일을 다시 확인해주세요.");
+            } else if (key == "userEmailCheck" && value != formData.get("codeNum")) {
+                throw new Error("인증코드가 일치하지 않습니다.\n인증코드를 확인해주세요.");
+            }
+        }
+    } catch (e) {
+        alert(e.message);
         return;
     }
 
