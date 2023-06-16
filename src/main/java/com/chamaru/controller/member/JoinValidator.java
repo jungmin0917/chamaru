@@ -26,14 +26,18 @@ public class JoinValidator implements Validator, MobileValidator, PasswordValida
         /*1. 아이디 중복 여부
          * 2. 비밀번호, 비밀번호 확인 일치 여부
          * 3. 비밀번호 영문, 숫자, 특수문자 포함하기 확인여부
-         * 4. 휴대전화번호 검증*/
+         * 4. 인증번호 일치여부 확인
+         * 5. 이메일 변경여부 확인
+         * 6. 휴대전화번호 검증*/
 
         String userId = joinForm.getUserId();
         String userPw = joinForm.getUserPw();
         String userPwRe = joinForm.getUserPwRe();
         String userPhone = joinForm.getUserPhone();
         String userEmail = joinForm.getUserEmail();
+        String realEmail = joinForm.getRealEmail();
         String userEmailCheck = joinForm.getUserEmailCheck();
+        String codeNum = joinForm.getCodeNum();
 
         //1. 아이디 중복 여부
         if (userId != null && !userId.isBlank() && memberRepository.exists(userId)) {
@@ -51,11 +55,21 @@ public class JoinValidator implements Validator, MobileValidator, PasswordValida
             errors.rejectValue("userPw", "Validation.userPw");
         }
 
-        /*if (mailController.getNum(userEmail) != userEmailCheck) {
+        //4. 인증번호 일치여부 확인
+        System.out.println("내가 적은 인증코드 : " + userEmailCheck);
+        System.out.println("메일로 전송된 인증코드 : " + codeNum);
+        if (userEmailCheck != null && !userEmailCheck.isBlank() && !userEmailCheck.equals(codeNum)) {
             errors.rejectValue("userEmailCheck", "Incorrect.joinForm.userEmailCheck");
-        }*/
+        }
 
-        //4. 휴대전화번호 검증 (선택사항)
+        //5. 이메일 변경여부 확인
+        System.out.println("회원가입에 적은 이메일 : " + userEmail);
+        System.out.println("최근에 인증한 이메일 : " + realEmail);
+        if (!userEmail.equals(realEmail)) {
+            errors.rejectValue("userEmail", "Different.joinForm.userEmail");
+        }
+
+        //6. 휴대전화번호 검증 (선택사항)
         if (userPhone != null && !userPhone.isBlank()) {
             if (!mobileCheck(userPhone)) {
                 errors.rejectValue("userPhone", "Validation.userPhone");

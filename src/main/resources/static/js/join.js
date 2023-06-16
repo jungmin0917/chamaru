@@ -30,7 +30,7 @@ function emailSend(f) {
         alert("인증메일을 보냈습니다!\n인증코드를 입력하세요!\n");
         f.userEmailCheck.focus();
         document.getElementById('realEmail').value = userEmail;
-        document.getElementById('mail').readOnly = true; // readonly 활성화
+        /*document.getElementById('mail').readOnly = true; // readonly 활성화*/
     }
 }
 
@@ -116,7 +116,7 @@ function execution_daum_address() {
             //$("[name=memberAddr2]").val(addr);            // 대체가능
 
             // 상세주소 입력란 disabled 속성 변경 및 커서를 상세주소 필드로 이동한다.
-            $(".address3_input").attr("readonly",false);
+            /*$(".address3_input").attr("readonly",false);*/
             $(".address3_input").attr("placeholder", "상세주소를 입력해주세요");
             $(".address3_input").focus();
         }

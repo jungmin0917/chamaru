@@ -18,13 +18,13 @@ public class MailController {
     @Autowired
     private JavaMailSender javaMailSender;
 
-    public String createRandomNm() {
-        /* 인증번호(난수) 생성 */
+    /*public String createRandomNm() {
+        *//* 인증번호(난수) 생성 *//*
         Random random = new Random();
         int checkNum = random.nextInt(888888) + 111111;
         String num = Integer.toString(checkNum);
         return num;
-    }
+    }*/
 
     @RequestMapping(value="/sendmail", method= RequestMethod.GET)
     @ResponseBody
@@ -32,7 +32,9 @@ public class MailController {
         System.out.println(userEmail + "넘어옴");
 
         /* 인증번호(난수) 생성 */
-        String checkNum = createRandomNm();
+        /* 인증번호(난수) 생성 */
+        Random random = new Random();
+        int checkNum = random.nextInt(888888) + 111111;
 
 
         /* 이메일 보내기 */
@@ -89,7 +91,7 @@ public class MailController {
         }
 
 
-        String num = checkNum;
+        String num = Integer.toString(checkNum);
         System.out.println("전달한 코드는 " + num + "입니다.");
         return num;
     }

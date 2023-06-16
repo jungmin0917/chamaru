@@ -94,7 +94,7 @@
         <!--상세주소 부분-->
         <div class="address3_wrap">
           <div class="address3_input_box">
-            <input class="address3_input" type="text" name="userAddr3" th:field="*{userAddr3}" readonly="readonly" th:placeholder="#{addressInfo3}">
+            <input class="address3_input" type="text" name="userAddr3" th:field="*{userAddr3}" th:placeholder="#{addressInfo3}">
           </div>
           <div class="address3Errors" th:each="err : ${#fields.errors('userAddr3')}" th:text="${err}"></div>
         </div>
