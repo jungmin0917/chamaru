@@ -10,20 +10,20 @@
             </div>
             <form method="post" th:action="@{/member/login}" th:object="${loginForm}">
                 <!--아이디 부분-->
-                <div class="login_id_wrap">
-                    <div class="login_id_name" th:text="#{userId}"></div>
-                    <div class="login_id_input_box">
-                        <input class="login_id_input" type="text" name="userId" th:field="*{userId}">
+                <div class="login_common_wrap">
+                    <div class="login_common_name" th:text="#{userId}"></div>
+                    <div class="login_common_input_box">
+                        <input class="login_common_input" type="text" name="userId" th:field="*{userId}">
                     </div>
-                    <div class="login_idErrors" th:if="${session.loginField == 'userId'}" th:text="${session.message}"></div>
+                    <div class="login_commonErrors" th:if="${session.loginField == 'userId'}" th:text="${session.message}"></div>
                 </div>
                 <!--비밀번호 부분-->
-                <div class="login_pw_wrap">
-                    <div class="login_pw_name" th:text="#{userPw}"></div>
-                    <div class="login_pw_input_box">
-                        <input class="login_pw_input" type="password" name="userPw" th:field="*{userPw}">
+                <div class="login_common_wrap">
+                    <div class="login_common_name" th:text="#{userPw}"></div>
+                    <div class="login_common_input_box">
+                        <input class="login_common_input" type="password" name="userPw" th:field="*{userPw}">
                     </div>
-                    <div class="login_pwErrors" th:if="${session.loginField == 'userPw'}" th:text="${session.message}"></div>
+                    <div class="login_commonErrors" th:if="${session.loginField == 'userPw'}" th:text="${session.message}"></div>
                 </div>
                 <!--공통 오류 부분-->
                 <div class="login_errors" th:if="${session.loginField == 'global'}" th:text="${session.message}"></div>

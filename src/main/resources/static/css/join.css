@@ -54,28 +54,28 @@
 	color: #5F6544;
 }
 
-/* 아이디 부분*/
-.id_wrap {
+/* 아이디, 비밀번호, 비밀번호 확인, 이름, 이메일, 전화번호 부분*/
+.join_common_wrap {
 	width: 50%;
 	margin-top: 20px;
 	margin: auto;
 	padding-top: 15px;
 }
 
-.id_name {
+.join_common_name {
 	font-size: 25px;
 	font-weight: bold;
 	color: #0BA252;
 }
 
-.id_input_box {
+.join_common_input_box {
 	border: 1px solid #0BA252;
 	height: 31px;
 	padding: 10px 14px;
 	border-radius: 15px;
 }
 
-.id_input {
+.join_common_input {
 	width: 100%;
 	height: 100%;
 	border: none;
@@ -83,162 +83,11 @@
 	color: #A9A6DC;
 }
 
-.id_input:focus {
+.join_common_input:focus {
     outline:none;
 }
 
-.idErrors {
-    color: red;
-}
-
-/* 비밀번호 부분*/
-.pw_wrap {
-	width: 50%;
-	margin-top: 20px;
-	margin: auto;
-	padding-top: 15px;
-}
-
-.pw_name {
-	font-size: 25px;
-	font-weight: bold;
-	color: #0BA252;
-}
-
-.pw_input_box {
-	border: 1px solid #0BA252;
-	height: 31px;
-	padding: 10px 14px;
-	border-radius: 15px;
-}
-
-.pw_input {
-	width: 100%;
-	height: 100%;
-	border: none;
-	font-size: 28px;
-	color: #A9A6DC;
-}
-
-.pw_input:focus {
-    outline:none;
-}
-
-.pwErrors {
-    color: red;
-}
-
-
-/* 비밀번호 확인 부분*/
-.pwRe_wrap {
-	width: 50%;
-	margin-top: 20px;
-	margin: auto;
-	padding-top: 15px;
-}
-
-.pwRe_name {
-	font-size: 25px;
-	font-weight: bold;
-	color: #0BA252;
-}
-
-.pwRe_input_box {
-	border: 1px solid #0BA252;
-	height: 31px;
-	padding: 10px 14px;
-	border-radius: 15px;
-}
-
-.pwRe_input {
-	width: 100%;
-	height: 100%;
-	border: none;
-	font-size: 28px;
-	color: #A9A6DC;
-}
-
-.pwRe_input:focus {
-    outline:none;
-}
-
-.pwReErrors {
-    color: red;
-}
-
-
-/* 이름 부분*/
-.nm_wrap {
-	width: 50%;
-	margin-top: 20px;
-	margin: auto;
-	padding-top: 15px;
-}
-
-.nm_name {
-	font-size: 25px;
-	font-weight: bold;
-	color: #0BA252;
-}
-
-.nm_input_box {
-	border: 1px solid #0BA252;
-	height: 31px;
-	padding: 10px 14px;
-	border-radius: 15px;
-}
-
-.nm_input {
-	width: 100%;
-	height: 100%;
-	border: none;
-	font-size: 28px;
-	color: #A9A6DC;
-}
-
-.nm_input:focus {
-    outline:none;
-}
-
-.nmErrors {
-    color: red;
-}
-
-
-/* 이메일 부분*/
-.email_wrap {
-	width: 50%;
-	margin-top: 20px;
-	margin: auto;
-	padding-top: 15px;
-}
-
-.email_name {
-	font-size: 25px;
-	font-weight: bold;
-	color: #0BA252;
-}
-
-.email_input_box {
-	border: 1px solid #0BA252;
-	height: 31px;
-	padding: 10px 14px;
-	border-radius: 15px;
-}
-
-.email_input {
-	width: 100%;
-	height: 100%;
-	border: none;
-	font-size: 28px;
-	color: #A9A6DC;
-}
-
-.email_input:focus {
-    outline:none;
-}
-
-.emailErrors {
+.join_commonErrors {
     color: red;
 }
 
@@ -306,43 +155,6 @@
 }
 
 
-
-/* 휴대전화번호 부분*/
-.phone_wrap {
-	width: 50%;
-	margin-top: 20px;
-	margin: auto;
-	padding-top: 15px;
-}
-
-.phone_name {
-	font-size: 25px;
-	font-weight: bold;
-	color: #0BA252;
-}
-
-.phone_input_box {
-	border: 1px solid #0BA252;
-	height: 31px;
-	padding: 10px 14px;
-	border-radius: 15px;
-}
-
-.phone_input {
-	width: 100%;
-	height: 100%;
-	border: none;
-	font-size: 28px;
-	color: #A9A6DC;
-}
-
-.phone_input:focus {
-    outline:none;
-}
-
-.phoneErrors {
-    color: red;
-}
 
 
 /* 주소입력부분*/

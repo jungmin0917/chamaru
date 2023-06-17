@@ -18,11 +18,20 @@ public class MailController {
     @Autowired
     private JavaMailSender javaMailSender;
 
+    /*public String createRandomNm() {
+        *//* 인증번호(난수) 생성 *//*
+        Random random = new Random();
+        int checkNum = random.nextInt(888888) + 111111;
+        String num = Integer.toString(checkNum);
+        return num;
+    }*/
+
     @RequestMapping(value="/sendmail", method= RequestMethod.GET)
     @ResponseBody
     public String sendMail(String userEmail) {
         System.out.println(userEmail + "넘어옴");
 
+        /* 인증번호(난수) 생성 */
         /* 인증번호(난수) 생성 */
         Random random = new Random();
         int checkNum = random.nextInt(888888) + 111111;
@@ -38,24 +47,24 @@ public class MailController {
                         "인증 번호는 <b>" + checkNum + "</b> 입니다." +
                         "<br>" +
                         "해당 인증코드를 인증코드란에 기입하여 주세요.";*/
-        String content="";
-        content+= "<div style='margin:20px;'>";
-        content+= "<h1> 안녕하세요 차마루입니다. </h1>";
-        content+= "<br>";
-        content+= "<p>해당 인증코드를 인증코드란에 기입하여 주세요.<p>";
-        content+= "<br>";
-        content+= "<p>감사합니다.<p>";
-        content+= "<br>";
-        content+= "<div align='center' style='border:1px solid black; font-family:verdana';>";
-        content+= "<h3 style='color:blue;'>회원가입 인증코드입니다.</h3>";
-        content+= "<div style='font-size:130%'>";
-        content+= "CODE : <strong>";
-        content+= checkNum+"</strong><div><br/> ";
-        content+= "</div>";
+        String content = "";
+        content += "<div style='margin:20px;'>";
+        content += "<h1> 안녕하세요 차마루입니다. </h1>";
+        content += "<br>";
+        content += "<p>해당 인증코드를 인증코드란에 기입하여 주세요.<p>";
+        content += "<br>";
+        content += "<p>감사합니다.<p>";
+        content += "<br>";
+        content += "<div align='center' style='border:1px solid black; font-family:verdana';>";
+        content += "<h3 style='color:blue;'>회원가입 인증코드입니다.</h3>";
+        content += "<div style='font-size:130%'>";
+        content += "CODE : <strong>";
+        content += checkNum + "</strong><div><br/> ";
+        content += "</div>";
 
         try {
             MimeMessage mail = javaMailSender.createMimeMessage();
-            MimeMessageHelper mailHelper = new MimeMessageHelper(mail,true,"UTF-8"); // true는 멀티파트 메세지를 사용하겠다는 의미
+            MimeMessageHelper mailHelper = new MimeMessageHelper(mail, true, "UTF-8"); // true는 멀티파트 메세지를 사용하겠다는 의미
 
             /*
              * 단순한 텍스트 메세지만 사용시엔 아래의 코드도 사용 가능

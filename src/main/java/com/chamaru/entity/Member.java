@@ -38,8 +38,8 @@ public class Member extends BaseEntity{
     private String userEmail;
 
     // 회원 생년월일
-    @Column(length = 8)
-    private LocalDateTime userBirth;
+    /*@Column(length = 8)
+    private LocalDateTime userBirth;*/
 
     // 전화번호
     @Column(length = 11, nullable = false)
