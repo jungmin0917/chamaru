@@ -5,9 +5,11 @@
 <main layout:fragment="content">
     <div class="wrapper">
         <div class="wrap">
+            <!--로고 부분-->
             <div class="login_logo">
-                <img class="logo_img" src="/images/로고.png" style="cursor:pointer">
+                <a th:href="@{/}"><img class="logo_img" src="/images/로고.png" style="cursor:pointer"></a>
             </div>
+            <!--로그인 제목 부분-->
             <div class="login_subject">
                 <span th:text="#{loginMessage}"></span>
             </div>

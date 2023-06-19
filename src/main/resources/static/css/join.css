@@ -1,8 +1,10 @@
 @charset "UTF-8";
+/*@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');*/
 
 * {
 	margin: 0;
 	padding: 0;
+	/*font-family: 'Cute Font', cursive;*/
 }
 
 /* 화면 전체 랩 */
@@ -85,7 +87,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #A9A6DC;
+	color: #5F6544;
 }
 
 .join_common_input:focus {
@@ -96,7 +98,7 @@
 .join_common_input:-webkit-autofill:hover,
 .join_common_input:-webkit-autofill:focus,
 .join_common_input:-webkit-autofill:active {
-  -webkit-text-fill-color: #A9A6DC;
+  -webkit-text-fill-color: #5F6544;
   -webkit-box-shadow: 0 0 0px 1000px white inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -136,7 +138,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-    color: #A9A6DC;
+    color: #5F6544;
 }
 
 .email_check_input:focus {
@@ -147,7 +149,7 @@
 .email_check_input:-webkit-autofill:hover,
 .email_check_input:-webkit-autofill:focus,
 .email_check_input:-webkit-autofill:active {
-  -webkit-text-fill-color: #A9A6DC;
+  -webkit-text-fill-color: #5F6544;
   -webkit-box-shadow: 0 0 0px 1000px white inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -210,7 +212,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #A9A6DC;
+	color: #5F6544;
 }
 
 .address1_input:focus {
@@ -263,7 +265,7 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #A9A6DC;
+	color: #5F6544;
 }
 
 .address2_input:focus {
@@ -294,14 +296,14 @@
 	height: 100%;
 	border: none;
 	font-size: 28px;
-	color: #A9A6DC;
+	color: #5F6544;
 }
 
 .address3_input:-webkit-autofill,
 .address3_input:-webkit-autofill:hover,
 .address3_input:-webkit-autofill:focus,
 .address3_input:-webkit-autofill:active {
-  -webkit-text-fill-color: #A9A6DC;
+  -webkit-text-fill-color: #5F6544;
   -webkit-box-shadow: 0 0 0px 1000px white inset;
   transition: background-color 5000s ease-in-out 0s;
 }

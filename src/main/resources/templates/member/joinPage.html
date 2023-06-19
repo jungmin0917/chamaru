@@ -5,9 +5,11 @@
 <main layout:fragment="content">
   <div class="wrapper">
     <div class="wrap">
+      <!--로고 부분-->
       <div class="join_logo">
-        <img class="logo_img" src="/images/로고.png" style="cursor:pointer">
+        <a th:href="@{/}"><img class="logo_img" src="/images/로고.png" style="cursor:pointer"></a>
       </div>
+      <!--회원가입 제목 부분-->
       <div class="subject">
         <span th:text="#{joinMessage}"></span>
       </div>
