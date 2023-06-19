@@ -6,14 +6,14 @@ function emailSend(f) {
     var userEmailCheck = f.userEmailCheck.value;
 
     if (userEmail == "") {
-        alert("이메일을 입력하세요");
+        alert("이메일을 입력하세요.");
         f.userEmail.focus();
         return;
     }
 
     //이메일 형식이 맞는지 체크
     if (!mailFormCheck(userEmail)) {
-        alert("이메일 형식이 아닙니다");
+        alert("이메일 형식이 아닙니다.");
         f.userEmail.focus();
         return;
     } else {
@@ -117,7 +117,7 @@ function execution_daum_address() {
 
             // 상세주소 입력란 disabled 속성 변경 및 커서를 상세주소 필드로 이동한다.
             /*$(".address3_input").attr("readonly",false);*/
-            $(".address3_input").attr("placeholder", "상세주소를 입력해주세요");
+            /*$(".address3_input").attr("placeholder", "상세주소를 입력해주세요.");*/
             $(".address3_input").focus();
         }
     }).open();
@@ -138,8 +138,6 @@ function join(f) {
     var userAddr3 = f.userAddr3.value;
     var codeNum = f.codeNum.value;
     var realEmail = f.realEmail.value;
-    alert(realEmail);
-    alert(codeNum);
 
     try {
         const requiredFields = {
@@ -153,10 +151,7 @@ function join(f) {
             userAddr1 : "주소찾기를 통해 주소를 입력하세요.",
             userAddr3 : "상세주소를 입력하세요.",
         };
-        const fieldsName = {
-            userId : "아이디",
-            userPw : "비밀번호",
-        }
+
         const formData = new FormData(f);
         for (const key in requiredFields) {
             const value = formData.get(key);
@@ -173,7 +168,7 @@ function join(f) {
                 throw new Error("비밀번호가 일치하지 않습니다.");
             } else if (key == "userEmail" && !mailFormCheck(value)) {
                 throw new Error("이메일 형식이 아닙니다.");
-            } else if (key == "userEmail" && value != formData.get("realEmail")) {
+            } else if (key == "userEmail" && formData.get("codeNum") != "" && value != formData.get("realEmail")) {
                 throw new Error("이메일이 변경된 상태입니다.\n이메일을 다시 확인해주세요.");
             } else if (key == "userEmailCheck" && value != formData.get("codeNum")) {
                 throw new Error("인증코드가 일치하지 않습니다.\n인증코드를 확인해주세요.");
@@ -181,7 +176,6 @@ function join(f) {
         }
     } catch (e) {
         alert(e.message);
-        return;
     }
 
 }
