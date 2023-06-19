@@ -13,7 +13,6 @@ import org.springframework.validation.Validator;
 public class JoinValidator implements Validator, MobileValidator, PasswordValidator {
 
     private final MemberRepository memberRepository;
-    private final MailController mailController;
     @Override
     public boolean supports(Class<?> clazz) {
         return JoinForm.class.isAssignableFrom(clazz);

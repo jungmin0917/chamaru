@@ -24,14 +24,18 @@
     color:red;
 }
 
+.join_blank {
+    height: 70px;
+}
+
 /* 페이지 제목 */
 .subject {
 	width: 50%;
 	height: 60px;
 	background-color: #0BA252;
+	margin: auto;
 	margin-top: 10px;
 	text-align: center;
-	margin: auto;
 	border-radius: 15px;
 }
 

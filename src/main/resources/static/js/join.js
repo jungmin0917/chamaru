@@ -138,8 +138,6 @@ function join(f) {
     var userAddr3 = f.userAddr3.value;
     var codeNum = f.codeNum.value;
     var realEmail = f.realEmail.value;
-    alert(realEmail);
-    alert(codeNum);
 
     try {
         const requiredFields = {

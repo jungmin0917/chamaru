@@ -16,6 +16,10 @@
 	margin: auto;
 }
 
+.login_blank {
+    height: 70px;
+}
+
 /* 페이지 제목 */
 .login_subject {
 	width: 50%;
