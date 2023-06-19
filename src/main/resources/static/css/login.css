@@ -16,16 +16,18 @@
 	margin: auto;
 }
 
-.login_blank {
-    height: 70px;
+.login_logo {
+    width: 50%;
+    margin: auto;
+    text-align: center;
 }
+
 
 /* 페이지 제목 */
 .login_subject {
 	width: 50%;
 	height: 60px;
 	background-color: #0BA252;
-	margin-top: 10px;
 	text-align: center;
 	margin: auto;
 	border-radius: 15px;
