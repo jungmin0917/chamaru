@@ -92,6 +92,15 @@
     outline:none;
 }
 
+.join_common_input:-webkit-autofill,
+.join_common_input:-webkit-autofill:hover,
+.join_common_input:-webkit-autofill:focus,
+.join_common_input:-webkit-autofill:active {
+  -webkit-text-fill-color: #A9A6DC;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .join_commonErrors {
     color: red;
 }
@@ -134,6 +143,15 @@
     outline:none;
 }
 
+.email_check_input:-webkit-autofill,
+.email_check_input:-webkit-autofill:hover,
+.email_check_input:-webkit-autofill:focus,
+.email_check_input:-webkit-autofill:active {
+  -webkit-text-fill-color: #A9A6DC;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .email_check_button {
 	border: 1px solid #0BA252;
 	height: 51px;
@@ -152,6 +170,7 @@
 	background-color: white;
 	color:#0BA252;
 }
+
 
 .emailCheckErrors {
     color: red;
@@ -278,9 +297,21 @@
 	color: #A9A6DC;
 }
 
+.address3_input:-webkit-autofill,
+.address3_input:-webkit-autofill:hover,
+.address3_input:-webkit-autofill:focus,
+.address3_input:-webkit-autofill:active {
+  -webkit-text-fill-color: #A9A6DC;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
 .address3_input:focus {
     outline:none;
 }
+
+
 
 .address3Errors {
     color: red;
@@ -299,6 +330,7 @@
 	padding-top: 30px;
 	text-align: center;
 	margin: auto;
+	height: 100px;
 }
 
 .join_button {

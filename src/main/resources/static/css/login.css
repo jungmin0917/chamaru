@@ -73,6 +73,15 @@
     outline:none;
 }
 
+.login_common_input:-webkit-autofill,
+.login_common_input:-webkit-autofill:hover,
+.login_common_input:-webkit-autofill:focus,
+.login_common_input:-webkit-autofill:active {
+  -webkit-text-fill-color: #A9A6DC;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 .login_commonErrors {
     color: red;
 }
@@ -85,15 +94,18 @@
     color: red;
 }
 
-/* 로그인 버튼 */
-.login_button_wrap {
-	padding-top: 30px;
-	text-align: center;
-	margin: auto;
+/*회원가입 로그인 틀*/
+.loginPage_join_login_wrap {
+    width: 50%;
+    height: 100px;
+    margin-top: 20px;
+    margin: auto;
+    padding-top: 20px;
 }
 
-.login_button {
-	width: 50%;
+/* 회원가입 버튼 */
+.loginPage_join_button {
+	width: 48%;
 	height: 60px;
 	background-color: #0BA252;
 	border: 1px solid #0BA252;
@@ -101,6 +113,26 @@
 	font-weight: 900;
 	color: white;
     border-radius: 15px;
+    float: left;
+}
+
+.loginPage_join_button:hover {
+	background-color: white;
+	color:#0BA252;
+}
+
+
+/* 로그인 버튼 */
+.login_button {
+	width: 48%;
+	height: 60px;
+	background-color: #0BA252;
+	border: 1px solid #0BA252;
+	font-size: 40px;
+	font-weight: 900;
+	color: white;
+    border-radius: 15px;
+    float: right;
 }
 
 .login_button:hover {
