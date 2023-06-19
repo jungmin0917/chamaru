@@ -3,11 +3,11 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/main}">
 <main layout:fragment="content">
-    <div class="wrapper">
-        <div class="wrap">
+    <div class="login_wrapper">
+        <div class="login_wrap">
             <!--로고 부분-->
             <div class="login_logo">
-                <a th:href="@{/}"><img class="logo_img" src="/images/로고.png" style="cursor:pointer"></a>
+                <a th:href="@{/}"><img class="logo_img" src="/images/로고.png"></a>
             </div>
             <!--로그인 제목 부분-->
             <div class="login_subject">
@@ -36,11 +36,11 @@
                 <div class="loginPage_join_login_wrap">
                     <!--회원가입 버튼 부분-->
                     <div class="loginPage_join_button_wrap">
-                        <a th:href="@{/member/join}"><button type="button" class="loginPage_join_button" th:text="#{member.btn.goJoinPage}" style="cursor:pointer"></button></a>
+                        <a th:href="@{/member/join}"><button type="button" class="loginPage_join_button" th:text="#{member.btn.goJoinPage}" style="cursor:pointer;"></button></a>
                     </div>
                     <!--로그인 버튼 부분-->
                     <div class="login_button_wrap">
-                        <button type="submit" class="login_button" th:text="#{member.btn.login}" style="cursor:pointer"></button>
+                        <button type="submit" class="login_button" th:text="#{member.btn.login}" style="cursor:pointer;"></button>
                     </div>
                 </div>
             </form>

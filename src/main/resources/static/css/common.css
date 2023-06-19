@@ -1,0 +1,25 @@
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+* {
+	font-family: 'Gamja Flower', cursive;
+}
+
+
+/* 화면 전체 랩 */
+/*.footer_wrapper {
+	width: 100%;
+}
+
+*//* content 랩 *//*
+.footer_wrap {
+	width: 980px;
+	margin: auto;
+	text-align: center;
+}
+
+.footer_img_wrap {
+    width: 50%;
+    margin: auto;
+}*/
