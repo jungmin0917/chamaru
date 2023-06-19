@@ -151,10 +151,7 @@ function join(f) {
             userAddr1 : "주소찾기를 통해 주소를 입력하세요.",
             userAddr3 : "상세주소를 입력하세요.",
         };
-        const fieldsName = {
-            userId : "아이디",
-            userPw : "비밀번호",
-        }
+
         const formData = new FormData(f);
         for (const key in requiredFields) {
             const value = formData.get(key);
