@@ -4,6 +4,13 @@
       layout:decorate="~{layouts/main}">
 
 <main layout:fragment="content">
+    <div class="wrapper">
+        <div class="wrap">
+            <br><br><br>
+            <a href="/"><div class="registLogoWrap">
+                <img class="registLogo" src="/images/로고.png" alt="">
+            </div></a>
+            <h1 id="registTitle">차량 등록</h1>
     <form method="post" th:action="@{/car/insert}" th:object="${carDTO}">
         <select name="company" th:field="*{company}">
             <option value="">제조사 선택</option>
@@ -92,5 +99,8 @@
         <input type="checkbox" id="option10" name="option10" th:checked="${option10}">
         <button type="submit" th:text="#{car.btn.insert}"></button>
     </form>
+        </div>
+    </div>
+
 </main>
 </html>

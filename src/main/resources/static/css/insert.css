@@ -1,0 +1,23 @@
+.wrapper {
+	width: 100%;
+}
+
+/* content 랩 */
+.wrap {
+	width: 980px;
+	margin: auto;
+}
+
+#registTitle {
+    color: #0BA252;
+}
+
+.registLogo {
+    width : 23%;
+    height : 8%;
+}
+
+.registLogoWrap {
+    margin: auto;
+    text-align: center;
+}

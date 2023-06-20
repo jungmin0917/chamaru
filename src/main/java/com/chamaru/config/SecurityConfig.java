@@ -27,7 +27,7 @@ public class SecurityConfig {
                 )
                 .logout(f -> f
                         .logoutRequestMatcher(new AntPathRequestMatcher("/member/logout"))
-                        .logoutSuccessUrl("/member/login") //로그아웃 성공 시 URL
+                        .logoutSuccessUrl("/") //로그아웃 성공 시 URL
                 );
 
         http.authorizeHttpRequests(f -> f
@@ -80,7 +80,8 @@ public class SecurityConfig {
 
     // 암호화용 객체
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
+
         return new BCryptPasswordEncoder();
     }
 }
