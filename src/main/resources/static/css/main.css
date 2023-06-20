@@ -42,6 +42,29 @@ header {
     top: 1rem;
     cursor: pointer;
 }
+
+#login {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color: #0BA252;
+    border-radius: 10px;
+    color: white;
+    right: 10rem;
+    top: 1rem;
+}
+
+#membership {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    background-color: #0BA252;
+    border-radius: 10px;
+    color: white;
+    right: 5rem;
+    top: 1rem;
+
+}
 /* Header - E */
 
 /* 프로모션 - S */
@@ -98,6 +121,7 @@ header {
     text-align: center;
     border-radius: 0.5rem;
     margin: 1rem 0 0 0;
+    cursor: pointer;
 }
 /* 전체차량 보러가기 - E */
 
@@ -141,6 +165,7 @@ img {
 }
 
 
+
 #car-select {
     display: flex;
     position: relative;
@@ -149,6 +174,11 @@ img {
     border-radius: 0.5rem;
     padding: 0 1rem;
     flex-wrap: wrap;
+}
+
+.page-movement {
+    width: inherit;
+    height: inherit;
 }
 
 .image1 {
@@ -199,8 +229,58 @@ img {
 .description {
     border: 1px solid;
     width: 330px;
-    height: 70px;
+    height: 80px;
 
+}
+
+.credit-level {
+    margin-left: 0.5rem;
+    color: #1ea89e;
+    font-size: 10px;
+}
+
+.minimun-rent-period {
+    color: #0BA252;
+    font-size: 10px;
+}
+
+.car-fullname {
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#car-select:hover + .car-fullname {
+    text-decoration: underline;
+}
+
+.key {
+    margin-left: 0.5rem;
+    font-size: 10px;
+}
+
+.expense {
+    margin-left: 0.5rem;
+}
+
+.expense-1 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0BA252;
+}
+
+.expense-2 {
+    font-size:14px;
+    color: #0BA252;
+}
+
+.expense-3 {
+    font-size:13px;
+    color: white;
+    background: #0BA252;
+    width: 30px;
+    height: 15px;
+    border-radius: 5px;
 }
 
 .moreView {
@@ -215,6 +295,7 @@ img {
 
 /* 서브 광고 - S */
 .sub-admin-banner {
+    cursor: pointer;
     width: 100%;
     height: 150px;
     padding: 0 1rem 0 1rem;
