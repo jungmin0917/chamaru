@@ -27,7 +27,7 @@ public class SecurityConfig {
                 )
                 .logout(f -> f
                         .logoutRequestMatcher(new AntPathRequestMatcher("/member/logout"))
-                        .logoutSuccessUrl("/member/login") //로그아웃 성공 시 URL
+                        .logoutSuccessUrl("/") //로그아웃 성공 시 URL
                 );
 
         http.authorizeHttpRequests(f -> f

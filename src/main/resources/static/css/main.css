@@ -6,7 +6,7 @@
 
 html {
     max-width: 800px;
-    margin: 0 0 0 5rem;
+    margin: auto;
 }
 
 
@@ -44,9 +44,25 @@ header {
     cursor: pointer;
 }
 
-#helloMsg {
+#registCar {
     position: absolute;
-    color: #0BA252;
+    width: 70px;
+    height: 30px;
+    background-color: #0BA252;
+    border-radius: 10px;
+    color: white;
+    left: 7rem;
+    top: 1rem;
+    padding-left: 0.25rem
+}
+
+#mypage {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    background-color: #0BA252;
+    border-radius: 10px;
+    color: white;
     right: 15rem;
     top: 1rem;
 }

@@ -4,7 +4,7 @@
 
 html {
     max-width: 800px;
-    margin: 0 0 0 5rem;
+    margin: auto;
 }
 
 /* header - S */
@@ -19,7 +19,11 @@ html {
     font-size: 20px;
 }
 
-.login {
+a {
+    text-decoration: none;
+}
+
+.logout {
     margin: 0 0 0.5rem 0;
     cursor: pointer;
     width: 60px;
