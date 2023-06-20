@@ -44,6 +44,13 @@ header {
     cursor: pointer;
 }
 
+#helloMsg {
+    position: absolute;
+    color: #0BA252;
+    right: 15rem;
+    top: 1rem;
+}
+
 #login {
     position: absolute;
     width: 50px;

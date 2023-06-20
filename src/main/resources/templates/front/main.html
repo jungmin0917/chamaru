@@ -23,6 +23,7 @@
             </div></a>
         </div>
         <div th:if="${session.memberInfo != null}">
+            <div id="helloMsg"><span th:text="${session.memberInfo.userNm} + #{hello.message}"></span></div>
             <a href="/member/logout"><div id="logout">
                 <span>로그아웃</span>
             </div></a>
