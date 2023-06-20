@@ -80,7 +80,8 @@ public class SecurityConfig {
 
     // 암호화용 객체
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
+
         return new BCryptPasswordEncoder();
     }
 }

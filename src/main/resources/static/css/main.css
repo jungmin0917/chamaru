@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -46,6 +47,17 @@ header {
 #login {
     position: absolute;
     width: 50px;
+    height: 30px;
+    background-color: #0BA252;
+    border-radius: 10px;
+    color: white;
+    right: 10rem;
+    top: 1rem;
+}
+
+#logout {
+    position: absolute;
+    width: 70px;
     height: 30px;
     background-color: #0BA252;
     border-radius: 10px;
