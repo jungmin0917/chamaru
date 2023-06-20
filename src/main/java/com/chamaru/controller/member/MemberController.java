@@ -9,6 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
 @Controller
 @RequestMapping("/member")
 @RequiredArgsConstructor
@@ -46,9 +49,4 @@ public class MemberController {
         return "member/loginPage";
     }
 
-   /* @GetMapping("/mail")
-    public void mail(String userEmail) {
-
-        System.out.println(userEmail);
-    }*/
 }

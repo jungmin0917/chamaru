@@ -13,7 +13,6 @@ import org.springframework.validation.Validator;
 public class JoinValidator implements Validator, MobileValidator, PasswordValidator {
 
     private final MemberRepository memberRepository;
-    private final MailController mailController;
     @Override
     public boolean supports(Class<?> clazz) {
         return JoinForm.class.isAssignableFrom(clazz);
@@ -23,12 +22,13 @@ public class JoinValidator implements Validator, MobileValidator, PasswordValida
     public void validate(Object target, Errors errors) {
         JoinForm joinForm = (JoinForm)target;
 
-        /*1. 아이디 중복 여부
+        /* 1. 아이디 중복 여부
          * 2. 비밀번호, 비밀번호 확인 일치 여부
          * 3. 비밀번호 영문, 숫자, 특수문자 포함하기 확인여부
          * 4. 인증번호 일치여부 확인
          * 5. 이메일 변경여부 확인
-         * 6. 휴대전화번호 검증*/
+         * 6. 휴대전화번호 검증
+         * */
 
         String userId = joinForm.getUserId();
         String userPw = joinForm.getUserPw();
@@ -69,13 +69,14 @@ public class JoinValidator implements Validator, MobileValidator, PasswordValida
             errors.rejectValue("userEmail", "Different.joinForm.userEmail");
         }
 
-        //6. 휴대전화번호 검증 (선택사항)
+        //6. 휴대전화번호 검증
         if (userPhone != null && !userPhone.isBlank()) {
             if (!mobileCheck(userPhone)) {
                 errors.rejectValue("userPhone", "Validation.userPhone");
             }
 
-            userPhone = userPhone.replaceAll("\\D", ""); //숫자만 남김
+            userPhone = userPhone.replaceAll("\\D", "");
+
             joinForm.setUserPhone(userPhone);
 
         }
