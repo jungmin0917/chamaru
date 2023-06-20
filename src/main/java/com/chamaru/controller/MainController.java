@@ -9,6 +9,30 @@ public class MainController {
     @GetMapping(value = {"", "/"})
     public String main() {
 
-        return "index";
+        return "front/main";
+    }
+
+    @GetMapping("/contract")
+    public String contract() {
+
+        return "front/contract";
+    }
+
+    @GetMapping("/mypage")
+    public String mypage() {
+
+        return "front/mypage";
+    }
+
+    @GetMapping("/product")
+    public String product() {
+
+        return "front/product";
+    }
+
+    @GetMapping("/search")
+    public String search() {
+
+        return "front/search";
     }
 }
